@@ -1,0 +1,276 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "Laplace Begonia",
+				"app-plus": {"titleNView": false,"bounce":"none"} 
+			}
+		}
+	    ,{
+            "path" : "pages/index/newtheme",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新主题",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/theme",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "主题",
+                "enablePullDownRefresh": false,
+					"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/register",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "注册",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+       
+        ,{
+            "path" : "pages/index/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "登录",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/jihuo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "激活",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/myself",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的信息",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/heself",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "他的信息",
+                "enablePullDownRefresh": false,
+					"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/demo/demo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+
+        ,{
+            "path" : "pages/index/find",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "发现",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/tag",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "标签",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/search",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "搜索",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/demo/title",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/title",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+									"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/admin/admin",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "后台管理",
+                "enablePullDownRefresh": false,
+					"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/admin/user",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        
+        ,{
+            "path" : "pages/admin/theme",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+						"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/admin/Statistics",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/message",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "消息",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/changepassword",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "修改密码",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/Retrieve_password",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "找回密码",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/chat",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/tool",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+		,{
+		    "path" : "pages/index/about",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/index/edit",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"app-plus": {"titleNView": false} 
+            }
+            
+        }
+        ,{
+            "path" : "pages/userhead/userhead",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }        ,{
+            "path" : "pages/test/test",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+					"app-plus": {"titleNView": false} 
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "Begonia",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}
