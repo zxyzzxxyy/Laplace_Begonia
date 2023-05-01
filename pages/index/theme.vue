@@ -11,7 +11,7 @@
 		
 		>
 		<view style="min-height:5vh;width: 100%;"></view>
-		<view style="width:60rem;background-color: white;height:auto;padding-left:5%;padding-right: 5%;padding-bottom: 1%;padding-top: 2%;border-radius: 10px;"
+		<view style="width:65%;background-color: white;height:auto;padding-left:5%;padding-right: 5%;padding-bottom: 1%;padding-top: 2%;border-radius: 10px;"
 		 :style="{'opacity':op}"
 		>
 			<view style="display: flex;flex-direction: row;margin-bottom: 20px;align-items: center;"  v-if="createtime!=0">
@@ -73,8 +73,8 @@
 								<view style="display: flex;align-items:center;width:100%">
 										<text style="margin-right: 10px;font-size:16px">{{username1}}</text>
 										<text style="font-size: 16px;" v-if="shenfen.length!=0">·</text><text style="margin-left:10px;font-size: 16px;color:#909399" v-if="shenfen.length!=0">{{shenfen}}</text>
-										<view style="margin-left: auto;margin-right: 10px;" v-if="changetime!=0">
-											<text style="color:#909399;font-size: 16px;">编辑于{{time1(changetime)}}</text>
+										<view style="margin-left: auto;margin-right: 10px;">
+											<text style="color:#909399;font-size: 16px;">发布于{{time1(createtime)}}</text>
 										</view>
 							</view>
 							<view style="margin-left: auto;" v-if="jugemyself()">
@@ -83,9 +83,12 @@
 							</view>
 							</view>
 							<view style="display: flex;flex-direction: row;align-items: center;margin-left: 5px;">
-								<text style="font-size: 14px;color:#838383;margin-right: 5px;">{{time(createtime)}}</text>
+								<text style="font-size: 14px;color:#838383;margin-right: 5px;">{{time(replytime)}}</text>
 								<u-icon name="eye"></u-icon>
 								<text style="color:#838383;font-size: 14px;margin-left: 2px;">{{look}}</text>
+								<view style="margin-left: auto;margin-right:5px;" v-if="changetime!=0">
+									<text style="color:#909399;font-size: 16px;">编辑于{{time1(changetime)}}</text>
+								</view>
 							</view>
 						</view>
 					</view>
@@ -99,6 +102,7 @@
 			:content="jugeemoji(article)" 
 			:lazy-load="true"
 			style="width:100%"
+			containerStyle="display:block;"
 			class="mp"
 			/>
 			<br>
@@ -142,7 +146,7 @@
 			</view>
 		</view>
 		
-		<view style="width:60rem;background-color: white;height:auto;padding-left:5%;padding-right: 5%;padding-bottom: 1%;padding-top: 1%;border-radius: 10px;margin-top: 20px;"
+		<view style="width:65%;background-color: white;height:auto;padding-left:5%;padding-right: 5%;padding-bottom: 1%;padding-top: 1%;border-radius: 10px;margin-top: 20px;"
 		 :style="{'opacity':op}" v-show="tuijianlist.length>0"
 		>
 			<view style="width:100%">
@@ -194,7 +198,7 @@
 			</view>
 		</view>
 		
-		<view style="width:60rem;background-color: white;height:auto;padding-left:5%;padding-right: 5%;padding-bottom: 1%;padding-top: 1%;border-radius: 10px;margin-top: 20px;"
+		<view style="width:65%;background-color: white;height:auto;padding-left:5%;padding-right: 5%;padding-bottom: 1%;padding-top: 1%;border-radius: 10px;margin-top: 20px;"
 		 :style="{'opacity':op}" v-show="createtime>0"
 		>
 		
@@ -313,6 +317,7 @@
 							:content="jugeemoji(item.data)" 
 							:lazy-load="true"
 							style="width:100%"
+							 container-style="display:block;"
 							class="mp"
 							/>
 						</view>
@@ -442,6 +447,7 @@
 				fangdou1:0,
 				fangdou2:true,
 				icon:"../../static/icon.png",
+				replytime:0,
 				chooseimage:false,
 				backgroundimage:"",
 				attentionlist:[],
@@ -1932,6 +1938,7 @@
 					this.title=res.data.data.title;
 					this.changetime=res.data.data.changetime;
 					this.num=res.data.data.num;
+					this.replytime=res.data.data.replytime;
 					if(res.data.data.position!=null&&res.data.data.position!=undefined){
 						this.position=res.data.data.position;
 						this.lal=res.data.data.lal;

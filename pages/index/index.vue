@@ -1148,6 +1148,7 @@
 					this.themelist=res.data.data;
 					this.jugeid=this.themelist[0].themeid;
 					this.limit++;
+					if(!this.show)
 					this.jugetop();
 					this.transition2=true;
 				}
@@ -1656,6 +1657,7 @@
 					this.zindex=-1;
 				}, 500)
 				this.sub2=0;
+				this.jugetop();
 			},
 			showjuge(){
 				return getApp().globalData.showjuge;
@@ -1857,6 +1859,7 @@
 							this.jugeid=this.themelist[0].themeid;
 							this.getmore=true;
 							setTimeout(() => {
+								if(!this.show)
 								this.jugetop();
 							}, 10)
 							if(res.data.data.length<10){

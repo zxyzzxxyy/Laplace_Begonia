@@ -61,7 +61,7 @@ export default {
     markdown: Boolean,
     containerStyle: {
       type: String,
-      default: ''
+      default: 'display:block'
     },
     content: {
       type: String,
