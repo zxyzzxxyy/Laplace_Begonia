@@ -168,11 +168,11 @@
 								
 							</view>
 							<view style="width:100%;height:20px;background:rgba(255,255,255,1);margin-top: -20px;
-							z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#99dc6d;margin-bottom: 10px;
+							z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#8bc863;margin-bottom: 10px;
 							" 
 							v-show="jugetops[index]"
 							>
-								查看更多<u-icon name="arrow-down" size=18 color="#99dc6d"></u-icon>
+								查看更多<u-icon name="arrow-down" size=18 color="#8bc863"></u-icon>
 							</view>
 
 							<view v-if="item.image.length==1">
@@ -234,7 +234,7 @@
 							
 						</view>
 						<view v-if="item.position!=undefined&&item.lal!=''" style="margin-left: 2vw;margin-top:20px;margin-bottom:20px">
-						<u--text  @click="weizhi(item)" prefixIcon="map-fill" :text="item.position" size="15"  color="#99dc6d" iconStyle="color:#99dc6d;margin-right:5px;size:17px"></u--text>
+						<u--text  @click="weizhi(item)" prefixIcon="map-fill" :text="item.position" size="15"  color="#8bc863" iconStyle="color:#8bc863;margin-right:5px;size:17px"></u--text>
 						</view>
 						<view style="display: flex;flex-direction: row;padding-left: 2vw;margin-top: 10px;">
 						<u-tag v-for="(item,index) in item.tags" :text="item"  icon="tags-fill" style="width: auto;margin-right:10px"  plain plainFill @click="linktag(item)"></u-tag>
@@ -251,7 +251,7 @@
 							<view style="display: flex;flex-direction: row;align-items: center;color:#838383" v-show="jugelike(item.themeid)"
 							@click="deletelike(item.themeid)"
 							>
-								<u-icon name="thumb-up-fill" color="#99dc6d"  size="25" style="margin-right: 3px;" ></u-icon>
+								<u-icon name="thumb-up-fill" color="#8bc863"  size="25" style="margin-right: 3px;" ></u-icon>
 								<text  style="font-size: 17px;">{{item.likes}}</text>
 							</view>
 							<view style="display: flex;flex-direction: row;align-items: center;color:#838383;margin-left: 30%;margin-right: 30%;">
@@ -341,19 +341,19 @@
 					
 					<view style="margin-bottom: 5px;display: flex;;flex-direction:column;width:100%;;align-items: center;
 					">
-						<text style=";color:#99dc6d;"
+						<text style=";color:#8bc863;"
 						@click="linkto('begonia.cafe')"
 						class="text1"
 						>
 							mingqian.begonia.cafe(备案中)
 						</text>
-						<text style=";color:#99dc6d;"
+						<text style=";color:#8bc863;"
 						@click="linkto('begonia.cafe')"
 						class="text1"
 						>
 							www.begonia.cafe(备案中)
 						 </text>
-						 <text style=";color:#99dc6d;"
+						 <text style=";color:#8bc863;"
 						 @click="linkto('begonia.cafe')"
 						 class="text1"
 						 >
@@ -367,7 +367,7 @@
 					</view>
 					<view style="margin-bottom: 5px;display: flex;flex-direction:row;width:100%;justify-content: center;
 					">
-						<text style=";color:#99dc6d;"
+						<text style=";color:#8bc863;"
 						@click="linkto('blog.txtz.link')"
 						class="text1"
 						>
@@ -381,7 +381,7 @@
 					</view>
 					<view style="margin-bottom: 5px;display: flex;flex-direction:row;width:100%;justify-content: center;
 					">
-						<text style=";color:#99dc6d;"
+						<text style=";color:#8bc863;"
 					 @click="beian()"
 						class="text1"
 						>
@@ -535,8 +535,8 @@
 					<text style="margin-top:15px;margin-bottom:10px;font-size: 17px;margin-top:20px">{{nowDate}} </text>
 					<text style="font-size: 17px;">论坛已运行{{rundata}}</text>
 					<view style="display: flex;justify-content: center;">
-					<text style=";color:#99dc6d;margin-top:15px;margin-right: 15px;"  class="text1" @click="about1=true,show=true">💻关于网站 </text>
-					<text style=";color:#99dc6d;margin-top:15px;margin-left:15px"  class="text1" @click="about2=true,show=true"> 🍵一点闲话</text>
+					<text style=";color:#8bc863;margin-top:15px;margin-right: 15px;"  class="text1" @click="about1=true,show=true">💻关于网站 </text>
+					<text style=";color:#8bc863;margin-top:15px;margin-left:15px"  class="text1" @click="about2=true,show=true"> 🍵一点闲话</text>
 					</view>
 				</view>
 				</swiper-item>
@@ -571,13 +571,13 @@
 		</view>
 		<u-toast ref="uToast"></u-toast>
 		<u-transition duration="500" :show="transition4&&!show" mode="fade-up" style="position: fixed;bottom:20px;z-index: 5;right:20px">
-		<view style="width:40px;height:40px;border-radius: 50%;display: flex;align-items: center;justify-content: center;background-color: #99dc6d;
+		<view style="width:40px;height:40px;border-radius: 50%;display: flex;align-items: center;justify-content: center;background-color: #8bc863;
 		;transition-duration:0.3s ;transition:0.3s;opacity: 1;"
 		 @click="backtop()"  v-show="scroll_top2==0"
 		>
 			<u-icon name="arrow-up-fill" size="30" style="" color="#ffffff"></u-icon>
 		</view>
-		<view style="width:40px;height:40px;border-radius: 50%;display: flex;align-items: center;justify-content: center;background-color: #99dc6d;
+		<view style="width:40px;height:40px;border-radius: 50%;display: flex;align-items: center;justify-content: center;background-color: #8bc863;
 		;transition-duration:0.3s ;transition:0.3s;opacity: 1;"
 		@click="showopen()"   v-if="scroll_top2>0"
 		>
@@ -696,7 +696,7 @@
 		right:20px;top:50%;margin-top:-25px;z-index:3px;" mode="fade" :show="!show">
 		<view style="width:45px;height:45px;border-radius: 10px;background-color: white;display:flex;align-items: center;justify-content: center;
 		">
-			<uni-icons type="headphones" size="35" color="#99dc6d"
+			<uni-icons type="headphones" size="35" color="#8bc863"
 			@click="show=!show,tools=!tools"
 			v-if="!musictype"
 			></uni-icons>
@@ -704,18 +704,18 @@
 			@click="show=!show,tools=!tools"
 			
 			>
-				<view style="width:8px;height:10px;border:5px 5px 0 0;background-color: #99dc6d;"
+				<view style="width:8px;height:10px;border:5px 5px 0 0;background-color: #8bc863;"
 				:style=""
 				:class="{'m1':musictype==1,'m111':musictype!=1}"
 				>
 					
 				</view>
-				<view style="width:8px;height:30px;margin-left:3px;margin-right:3px;border:5px 5px 0 0;background-color: #99dc6d;"
+				<view style="width:8px;height:30px;margin-left:3px;margin-right:3px;border:5px 5px 0 0;background-color: #8bc863;"
 				:class="{'m3':musictype==1,'m333':musictype!=1}"
 				>
 					
 				</view>
-				<view style="width:8px;height:20px;border:5px 5px 0 0;background-color: #99dc6d;"
+				<view style="width:8px;height:20px;border:5px 5px 0 0;background-color: #8bc863;"
 				:class="{'m2':musictype==1,'m222':musictype!=1}"
 				>
 					
@@ -724,7 +724,7 @@
 		</view>
 		</u-transition>
 		<!--音乐-->
-		<u-popup :show="tools" @close="tools=false,show=false" mode="center" round="20">
+		<u-popup :show="tools" @close="tools=false,show=false,charaop=0" mode="center" round="20">
 			<view style="width:80vw;height:80vh;background-color: white;border-radius: 15px;
 			display:flex;flex-direction:row
 			" v-if="musiclist.length>0" @mouseenter="mouseenter" @mouseleave="mouseleave">
@@ -767,7 +767,7 @@
 						>
 							
 						</image>
-						<image style=";height:100%;position: absolute;z-index: 2;transition: 0.5s;" :class="{'charaop1':charaop==1,'charaop2':charaop==0}" mode="heightFix" src="https://txtzz-1301452902.file.myqcloud.com/milky-green-v1.webp">
+						<image style="width:100%;height:100%;position: absolute;z-index: 2;transition: 0.5s;" :class="{'charaop1':charaop==1,'charaop2':charaop==0}"  mode="heightFix" src="https://txtzz-1301452902.file.myqcloud.com/milky-green-v1.webp">
 							
 						</image>
 					</view>
@@ -2136,7 +2136,7 @@
 		transform: translateX(30vw);
 	}
 	.text-blue :hover{
-		color:#99dc6d
+		color:#8bc863
 	}
 	.text1 :hover{
 		font-weight: 700;
@@ -2148,7 +2148,7 @@
 		background:rgba(255, 255, 255, 0);
 	}
 	.text_select {
-		color:#99dc6d;
+		color:#8bc863;
 		font-weight: 800;
 	}
 	.re1{

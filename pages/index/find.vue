@@ -44,7 +44,7 @@
 							<view style="display: flex;flex-direction: row;align-items: center;"><u-icon name="chat" size="15"></u-icon><text>{{item.num}}</text></view>
 						</view>
 						<view style="font-size: 15px;">
-							<text style="color:#99dc6d">#{{item.tagname}}#</text><text style="opacity: 0;">1</text><text>{{item.title}}</text>
+							<text style="color:#8bc863">#{{item.tagname}}#</text><text style="opacity: 0;">1</text><text>{{item.title}}</text>
 						</view>
 					</view>
 				</view>
@@ -72,8 +72,8 @@
 							</view>
 						</view>
 
-						<view style="width:50px;height:30px;background-color: #99dc6d;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="!jugeattention(item.userid)&&jugemyself(item.userid)&&jugelogin()" @click="addattention(item.userid)">关注</view>
-						<view style="width:48px;height:28px;background-color: #ecf5ff;border: 1px solid #99dc6d;color:#99dc6d;display: flex;align-items: center;justify-content: center;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="jugeattention(item.userid)&&jugemyself(item.userid)&&jugelogin()" @click="deleteattention(item.userid)">已关注</view>
+						<view style="width:50px;height:30px;background-color: #8bc863;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="!jugeattention(item.userid)&&jugemyself(item.userid)&&jugelogin()" @click="addattention(item.userid)">关注</view>
+						<view style="width:48px;height:28px;background-color: #ecf5ff;border: 1px solid #8bc863;color:#8bc863;display: flex;align-items: center;justify-content: center;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="jugeattention(item.userid)&&jugemyself(item.userid)&&jugelogin()" @click="deleteattention(item.userid)">已关注</view>
 					</view>
 					<view style="width: 100%;display: flex;flex-direction: column;align-items: center;justify-content: center;">
 					<text style="font-size: 15px;color:#999999;margin:0 auto" v-if="fanss.length<10">暂无更多</text>
@@ -133,11 +133,11 @@
 							
 						</view>
 						<view style="width:100%;height:20px;background:rgba(255,255,255,1);margin-top: -20px;
-						z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#99dc6d;margin-bottom: 10px;
+						z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#8bc863;margin-bottom: 10px;
 						" 
 						v-show="jugetops[index]"
 						>
-							查看更多<u-icon name="arrow-down" size=18 color="#99dc6d"></u-icon>
+							查看更多<u-icon name="arrow-down" size=18 color="#8bc863"></u-icon>
 						</view>
 						<view v-if="item.image.length==1">
 							<view  style="display: flex;width:100%;flex-wrap: warp;border-radius: 3px;">
@@ -210,7 +210,7 @@
 						<view style="display: flex;flex-direction: row;align-items: center;color:#838383" v-show="jugelike(item.themeid)"
 						@click="deletelike(item.themeid)"
 						>
-							<u-icon name="thumb-up-fill" color="#99dc6d"  size="25" style="margin-right: 3px;" ></u-icon>
+							<u-icon name="thumb-up-fill" color="#8bc863"  size="25" style="margin-right: 3px;" ></u-icon>
 							<text  style="font-size: 17px;">{{item.likes}}</text>
 						</view>
 						<view style="display: flex;flex-direction: row;align-items: center;color:#838383;margin-left: 30%;margin-right: 30%;">
@@ -239,27 +239,27 @@
 				
 			</view>
 			</scroll-view>
-			<u-transition mode="fade-right" style="width:15%" show>
+			<u-transition mode="fade-right" style="width:18%" show>
 			<view style="width:100%;height:250px;border-radius: 10px;background-color: white;margin-left: 20px;padding:10px"
 			 :style="{'opacity':op}"
 			>
 				
 				<text style="font-size: 20px;font-weight: 700;">推荐</text>
 				<u-divider text="分割线" :dot="true" style="width:95%;margin: 0 auto;margin-top: 10px;margin-bottom: 10px;"></u-divider>
-				<view style="display: flex;flex-direction: row;align-items: center;margin-top: 30px;font-size: 18px;color:#99dc6d" v-if="choose==2">
-					<u-icon name="tags" size="33" style="margin-right: 5px;" color="#99dc6d"></u-icon><text>热门话题</text>
+				<view style="display: flex;flex-direction: row;align-items: center;margin-top: 30px;font-size: 18px;color:#8bc863" v-if="choose==2">
+					<u-icon name="tags" size="33" style="margin-right: 5px;" color="#8bc863"></u-icon><text>热门话题</text>
 				</view>
 				<view style="display: flex;flex-direction: row;align-items: center;margin-top: 30px;font-size: 18px; " v-if="choose!=2" @click="changetag('a3'),choose=2">
 					<u-icon name="tags" size="33" style="margin-right: 5px;"  ></u-icon><text>热门话题</text>
 				</view>
-				<view style="display: flex;flex-direction: row;align-items: center;margin-top: 30px;font-size: 18px;color:#99dc6d" v-if="choose==0">
-					<u-icon name="account" size="33" style="margin-right: 5px;" color="#99dc6d"></u-icon><text>推荐用户</text>
+				<view style="display: flex;flex-direction: row;align-items: center;margin-top: 30px;font-size: 18px;color:#8bc863" v-if="choose==0">
+					<u-icon name="account" size="33" style="margin-right: 5px;" color="#8bc863"></u-icon><text>推荐用户</text>
 				</view>
 				<view style="display: flex;flex-direction: row;align-items: center;margin-top: 30px;font-size: 18px; " v-if="choose!=0" @click="changetag('a2'),choose=0">
 					<u-icon name="account" size="33" style="margin-right: 5px;"  ></u-icon><text>推荐用户</text>
 				</view>
-				<view style="display: flex;flex-direction: row;align-items: center;margin-top: 30px;font-size: 18px;color:#99dc6d" v-if="choose==1">
-					<u-icon name="file-text" size="33" style="margin-right: 5px;" color="#99dc6d"></u-icon><text>热门文章</text>
+				<view style="display: flex;flex-direction: row;align-items: center;margin-top: 30px;font-size: 18px;color:#8bc863" v-if="choose==1">
+					<u-icon name="file-text" size="33" style="margin-right: 5px;" color="#8bc863"></u-icon><text>热门文章</text>
 				</view>
 				<view style="display: flex;flex-direction: row;align-items: center;margin-top: 30px;font-size: 18px;" v-if="choose!=1" @click="changetag('a1'),choose=1">
 					<u-icon name="file-text" size="33" style="margin-right: 5px;"></u-icon><text>热门文章</text>

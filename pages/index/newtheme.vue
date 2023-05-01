@@ -106,8 +106,8 @@
 				</view>
 			</view>
 			<view style="display: flex;flex-direction: row;" >
-			<u--text prefixIcon="map-fill" iconStyle="color:#99dc6d;margin-right:5px" v-if="position==''" type="primary" :plain="true" text="添加地点" color="#99dc6d" @click="setposition" style="width:auto;margin:0;height:30px;"></u--text>
-			<u--text prefixIcon="map-fill" iconStyle="color:#99dc6d;margin-right:5px" v-if="position!=''" type="primary" :plain="true" :text="position" @click="setposition" style="width:auto;margin:0;height:30px;"></u--text>
+			<u--text prefixIcon="map-fill" iconStyle="color:#8bc863;margin-right:5px" v-if="position==''" type="primary" :plain="true" text="添加地点" color="#8bc863" @click="setposition" style="width:auto;margin:0;height:30px;"></u--text>
+			<u--text prefixIcon="map-fill" iconStyle="color:#8bc863;margin-right:5px" v-if="position!=''" type="primary" :plain="true" :text="position" @click="setposition" style="width:auto;margin:0;height:30px;"></u--text>
 			</view>
 			<view style="display: flex;flex-direction: row;align-items: center;flex-wrap: wrap;">
 					<view v-for="(item,index) in fenlei">

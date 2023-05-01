@@ -17,7 +17,7 @@ export default {
         startText: '开始',
         endText: '结束',
         customList: () => [],
-        color: '#99dc6d',
+        color: '#8bc863',
         minDate: 0,
         maxDate: 0,
         defaultDate: null,

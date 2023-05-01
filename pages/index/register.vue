@@ -45,7 +45,7 @@
 				  <u-button text="注册" type="primary" @click="register()"></u-button>
 				</view>
 				<view style="margin-top: 20px;display: flex;align-items: center;justify-content: center;flex-direction: row;">
-					<text style="font-size: 16px;">已有账号?</text><text style="font-size: 16px;color:#99dc6d" @click="login()">去登录</text>
+					<text style="font-size: 16px;">已有账号?</text><text style="font-size: 16px;color:#8bc863" @click="login()">去登录</text>
 				</view>
 			</view>
 		</view>

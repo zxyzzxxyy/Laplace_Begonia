@@ -14,7 +14,7 @@ export default {
         indicatorBarWidth: 20,
         indicator: true,
         indicatorColor: '#f2f2f2',
-        indicatorActiveColor: '#99dc6d',
+        indicatorActiveColor: '#8bc863',
         indicatorStyle: ''
     }
 }

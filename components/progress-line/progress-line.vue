@@ -28,7 +28,7 @@ export default {
 		activeColor:{
 			type:String,
 			default(){
-				return '#99dc6d'
+				return '#8bc863'
 			}
 		},
 		// 未选择进度条颜色

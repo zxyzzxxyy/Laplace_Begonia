@@ -4,7 +4,7 @@
 			<view>
 				<text style="font-size: 20px;font-weight: 700;">用 户</text>
 				<u-divider ></u-divider>
-				<view style="display: flex;flex-direction: row;color:#99dc6d" v-if="choose1==0">
+				<view style="display: flex;flex-direction: row;color:#8bc863" v-if="choose1==0">
 					<u-icon name="account" size="18" style="margin-right: 0.2rem;"></u-icon>
 					<text>用户管理</text>
 				</view>
@@ -12,7 +12,7 @@
 					<u-icon name="account" size="18" style="margin-right: 0.2rem;"></u-icon>
 					<text>用户管理</text>
 				</view>
-				<view style="display: flex;flex-direction: row;color:#99dc6d;margin-top: 1rem;" v-if="choose1==1">
+				<view style="display: flex;flex-direction: row;color:#8bc863;margin-top: 1rem;" v-if="choose1==1">
 					<u-icon name="account" size="18" style="margin-right: 0.2rem;"></u-icon>
 					<text>系统消息</text>
 				</view>
@@ -20,7 +20,7 @@
 					<u-icon name="account" size="18" style="margin-right: 0.2rem;"></u-icon>
 					<text>系统消息</text>
 				</view>
-				<view style="display: flex;flex-direction: row;color:#99dc6d;margin-top: 1rem;" v-if="choose1==3">
+				<view style="display: flex;flex-direction: row;color:#8bc863;margin-top: 1rem;" v-if="choose1==3">
 					<u-icon name="account" size="18" style="margin-right: 0.2rem;"></u-icon>
 					<text>头像框</text>
 				</view>
@@ -133,7 +133,7 @@
 							<u--image :src="messageimage" style="margin-right:1rem;margin-left:1rem"  
 							height="10rem"
 							v-if="messageimage!=''"></u--image>
-							<text style="color:#99dc6d" v-if="messageimage!=''" @click="messageimage=''">删除</text>
+							<text style="color:#8bc863" v-if="messageimage!=''" @click="messageimage=''">删除</text>
 						</view>
 					</view>
 				</view>
@@ -155,8 +155,8 @@
 								<view style="display: flex;flex-direction:row">
 								<text>状态 : </text><text style="opacity:0">1</text><text v-if="item.show1==1" style="color:#5ac725"> 正常</text><text v-if="item.show1==0" style="color:#f56c6c">已删除</text>
 								</view><br>
-								<text v-if="item.show1==1" style="color:#99dc6d" @click="deletemessage(item.id)">删除</text>
-								<text v-if="item.show1==0" style="color:#99dc6d" @click="replymessage(item.id)">恢复</text>
+								<text v-if="item.show1==1" style="color:#8bc863" @click="deletemessage(item.id)">删除</text>
+								<text v-if="item.show1==0" style="color:#8bc863" @click="replymessage(item.id)">恢复</text>
 							</view>
 						</view>
 					</view>
@@ -299,7 +299,7 @@
 						>
 						<u-icon name="plus" size="50"></u-icon>
 						</view>
-						<text v-if="user.userheadimage!=null" style="color:#99dc6d" @click="deletehead()">删除头像</text>
+						<text v-if="user.userheadimage!=null" style="color:#8bc863" @click="deletehead()">删除头像</text>
 					</view>
 					<view>
 						<text>用户名</text>

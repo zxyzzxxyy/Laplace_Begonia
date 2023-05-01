@@ -16,7 +16,7 @@
 				<view style="width:100%;display: flex;align-items: center;font-size: 12px;color:#909399;justify-content: center;margin-top: 5px;" v-if="juge1(index)">{{time1(item.time)}}</view>
 				<view v-if="juge(item)" style="width:98%;margin-right: 2vw;margin-top: 5px;margin-bottom: 5px;display: flex;flex-direction: row; align-items: flex-start">
 				
-					<view style="width:auto;border-radius: 5px;background-color: #99dc6d;overflow: hidden;max-width: 50vw;padding:7px;padding-left:10px ;margin-left: auto;margin-top: 10px;">
+					<view style="width:auto;border-radius: 5px;background-color: #8bc863;overflow: hidden;max-width: 50vw;padding:7px;padding-left:10px ;margin-left: auto;margin-top: 10px;">
 						<text style="border-radius: 5px;font-size: 16px;color:#ffffff;">{{item.message}}</text>
 						<view v-if="jugeimage(item.image)" style="margin-top: 5px;">
 							<image :src="item.image" style="min-width: 50px;height:auto;max-width: 100%;border-radius: 5px;"  mode="widthFix"></image>

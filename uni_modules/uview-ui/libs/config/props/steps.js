@@ -12,7 +12,7 @@ export default {
     steps: {
         direction: 'row',
         current: 0,
-        activeColor: '#99dc6d',
+        activeColor: '#8bc863',
         inactiveColor: '#969799',
         activeIcon: '',
         inactiveIcon: '',

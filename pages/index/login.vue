@@ -34,10 +34,10 @@
 				  <u-button text="登录" type="primary" @click="login()"></u-button>
 				</view>
 				<view style="margin-top: 20px;display: flex;align-items: center;justify-content: center;flex-direction: row;">
-					<text style="font-size: 16px;">没有账号?</text><text style="font-size: 16px;color:#99dc6d" @click="register()">去注册</text>
+					<text style="font-size: 16px;">没有账号?</text><text style="font-size: 16px;color:#8bc863" @click="register()">去注册</text>
 				</view>
 				<view style="margin-top: 5px;display: flex;align-items: center;justify-content: center;flex-direction: row;">
-					<text style="font-size: 16px;color:#99dc6d" @click="Retrieve_password()">找回密码</text>
+					<text style="font-size: 16px;color:#8bc863" @click="Retrieve_password()">找回密码</text>
 				</view>
 			</view>
 		</view>

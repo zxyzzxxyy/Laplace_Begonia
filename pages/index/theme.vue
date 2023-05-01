@@ -78,8 +78,8 @@
 										</view>
 							</view>
 							<view style="margin-left: auto;" v-if="jugemyself()">
-							<view style="width:55px;height:32px;background-color: #99dc6d;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;"  v-show="jugelogin()&&!jugeattention()" @click="addattention()">关注</view>
-							<view style="width:53px;height:30px;background-color: #ecf5ff;border: 1px solid #99dc6d;color:#99dc6d;display: flex;align-items: center;justify-content: center;border-radius: 3px;"  v-show="jugelogin()&&jugeattention()" @click="deleteattention()">已关注</view>
+							<view style="width:55px;height:32px;background-color: #8bc863;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;"  v-show="jugelogin()&&!jugeattention()" @click="addattention()">关注</view>
+							<view style="width:53px;height:30px;background-color: #ecf5ff;border: 1px solid #8bc863;color:#8bc863;display: flex;align-items: center;justify-content: center;border-radius: 3px;"  v-show="jugelogin()&&jugeattention()" @click="deleteattention()">已关注</view>
 							</view>
 							</view>
 							<view style="display: flex;flex-direction: row;align-items: center;margin-left: 5px;">
@@ -102,7 +102,7 @@
 			class="mp"
 			/>
 			<br>
-			<u--text  @click="weizhi" style="margin-left: 0vw;" prefixIcon="map-fill" :text="position" size="17" v-if="position!=undefined&&lal!=''" color="#99dc6d" iconStyle="color:#99dc6d;margin-right:5px;size:17px"></u--text>
+			<u--text  @click="weizhi" style="margin-left: 0vw;" prefixIcon="map-fill" :text="position" size="17" v-if="position!=undefined&&lal!=''" color="#8bc863" iconStyle="color:#8bc863;margin-right:5px;size:17px"></u--text>
 			<view style="display: flex;flex-direction: row;padding-left: 0%;">
 			<u-tag v-for="(item,index) in tags" :text="item"  icon="tags-fill" style="width: auto;margin-right:10px" plain plainFill @click="linktag(item)"></u-tag>
 			</view>
@@ -124,7 +124,7 @@
 				<view style="display: flex;flex-direction: row;align-items: center;color:#838383" v-show="jugelike(themeid)"
 				@click="deletelike(themeid)"
 				>
-					<u-icon name="thumb-up-fill" color="#99dc6d"  size="25" style="margin-right: 3px;" ></u-icon>
+					<u-icon name="thumb-up-fill" color="#8bc863"  size="25" style="margin-right: 3px;" ></u-icon>
 					<text  style="font-size: 17px;">{{like}}</text>
 				</view>
 				<view v-show="saveshow==0" style="display: flex;flex-direction: row;align-items: center;color:#838383;margin-left: 30%;margin-right: 30%;" @click="saveadd()">
@@ -378,7 +378,7 @@
 									<u-button type="primary" text="回复" style="width:80px;margin-right:5px;margin-left: auto;" @click="replylouceng(item)"></u-button>
 								</view>
 							</view>
-							<view style="width:100%;color:#99dc6d;display: flex;flex-direction: row;">
+							<view style="width:100%;color:#8bc863;display: flex;flex-direction: row;">
 							
 								<view v-if="item.loucengreply.length>3&&item.sub==0" @click="item.sub=1">
 									<text>查看全部{{item.loucengreply.length}}条回复</text>
@@ -1377,7 +1377,7 @@
 			},
 			changeimagecolor:function(){
 				if(this.chooseimagecolor=="#c4c6c9"||this.uploadimages.length>0){
-					this.chooseimagecolor="#99dc6d";
+					this.chooseimagecolor="#8bc863";
 				}
 				else this.chooseimagecolor="#c4c6c9";
 			},
@@ -1387,7 +1387,7 @@
 			},
 			changeemojicolor(){
 				if(this.chooseemojicolor=="#c4c6c9"){
-					this.chooseemojicolor="#99dc6d";
+					this.chooseemojicolor="#8bc863";
 					this.chooseimagecolor="#c4c6c9";
 				}
 				else this.chooseemojicolor="#c4c6c9";

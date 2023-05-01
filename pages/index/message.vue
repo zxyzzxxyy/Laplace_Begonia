@@ -13,30 +13,30 @@
 						<text>回复我的</text>
 					</view>
 					<view style="display: flex;flex-direction: column;margin-left: 10px;" v-if="choose==0">
-						<text style="color:#99dc6d">回复我的</text>
-						<view style="background-color:#99dc6d;width:auto;height:2px;border-radius: 1px;margin-top: 5px;"></view>
+						<text style="color:#8bc863">回复我的</text>
+						<view style="background-color:#8bc863;width:auto;height:2px;border-radius: 1px;margin-top: 5px;"></view>
 					</view>
 					<view style="margin-left: 30px;" v-if="choose!=1" @click="choose=1">
 						<text>系统消息</text>
 					</view>
 					<view style="display: flex;flex-direction: column;margin-left: 30px;" v-if="choose==1">
-						<text style="color:#99dc6d">系统消息</text>
-						<view style="background-color:#99dc6d;width:auto;height:2px;border-radius: 1px;margin-top: 5px;"></view>
+						<text style="color:#8bc863">系统消息</text>
+						<view style="background-color:#8bc863;width:auto;height:2px;border-radius: 1px;margin-top: 5px;"></view>
 					</view>
 					<view style="margin-left: 30px;" v-if="choose!=2" @click="choose=2">
 						<text>私信</text>
 					</view>
 					<view style="display: flex;flex-direction: column;margin-left: 30px;" v-if="choose==2">
-						<text style="color:#99dc6d">私信</text>
-						<view style="background-color:#99dc6d;width:auto;height:2px;border-radius: 1px;margin-top: 5px;"></view>
+						<text style="color:#8bc863">私信</text>
+						<view style="background-color:#8bc863;width:auto;height:2px;border-radius: 1px;margin-top: 5px;"></view>
 					</view>
 					<!--
 					<view style="margin-left: 10px;" v-if="choose!=1"  @click="choose=1">
 						<text>点赞我的</text>
 					</view>
 					<view style=";display: flex;flex-direction: column;margin-left: 10px;" v-if="choose==1">
-						<text style="color:#99dc6d">点赞我的</text>
-						<view style="background-color:#99dc6d;width:auto;height:2px;border-radius: 1px;margin-top: 5px;"></view>
+						<text style="color:#8bc863">点赞我的</text>
+						<view style="background-color:#8bc863;width:auto;height:2px;border-radius: 1px;margin-top: 5px;"></view>
 					</view>
 					-->
 				</view>
@@ -84,7 +84,7 @@
 						</view>
 						<view style="width:90%;height:auto;background-color:#f4f4f5;margin-top:20px;border-radius:10px;padding:1vh;padding-top:15px">
 							<u--text :text="item.message" size="16"></u--text>
-							<u--text :lines="1" text="地址链接" size="16" color="#99dc6d" style="margin-top: 5px;" @click="linkto1(item.src)" v-if="item.src!=''"></u--text>
+							<u--text :lines="1" text="地址链接" size="16" color="#8bc863" style="margin-top: 5px;" @click="linkto1(item.src)" v-if="item.src!=''"></u--text>
 							<u--image :src="item.images" style="margin-right:1rem;margin-top: 5px;"
 							height="10rem"
 							radius="5px"
@@ -136,8 +136,8 @@
 			<view style="background-color: white;border-radius: 10px;width:15vw;height:10vh;min-height: 10vh;margin-left: 5vw;padding:20px">
 				<text style="font-size: 20px;font-weight: 700;">消息通知</text>
 				<u-divider text="分割线" :dot="true" style="width:95%;margin: 0 auto;margin-top: 10px;margin-bottom: 10px;"></u-divider>
-				<view style="display: flex;flex-direction: row;align-items: center;margin-top: 10px;font-size: 18px;color:#99dc6d" >
-					<u-icon name="chat" size="33" style="margin-right: 5px;" color="#99dc6d"></u-icon><text>全部消息</text>
+				<view style="display: flex;flex-direction: row;align-items: center;margin-top: 10px;font-size: 18px;color:#8bc863" >
+					<u-icon name="chat" size="33" style="margin-right: 5px;" color="#8bc863"></u-icon><text>全部消息</text>
 				</view>
 			</view>
 		</view>

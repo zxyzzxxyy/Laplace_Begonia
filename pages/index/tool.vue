@@ -12,7 +12,7 @@
 			    v-model="url1"
 				style="border-radius: 5px 0 0 5px;width:90%"
 			  ></u--input>
-			  <view style="width:10%;height:auto;color:white;background-color: #99dc6d;display: flex;align-items: center;justify-content: center;border-radius:0  5px 5px 0;" @click="send()">
+			  <view style="width:10%;height:auto;color:white;background-color: #8bc863;display: flex;align-items: center;justify-content: center;border-radius:0  5px 5px 0;" @click="send()">
 				  发送
 			  </view>
 			</view>

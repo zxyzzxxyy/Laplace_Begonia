@@ -30,9 +30,9 @@
 					<u--text text="暂无签名" type="info" v-if="sign==null"></u--text>
 					<view style="width:180px;margin-left: auto;margin-top: 30px;">
 					<view style="display: flex;flex-direction: row;width:180px">
-					<view style="width:75px;height:38px;background-color: #99dc6d;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;"  v-show="!jugeattention()&&jugelogin()" @click="addattention()">关注</view>
-					<view style="width:73px;height:36px;background-color: #ecf5ff;border: 1px solid #99dc6d;color:#99dc6d;display: flex;align-items: center;justify-content: center;border-radius: 3px;"  v-show="jugeattention()&&jugelogin()" @click="deleteattention()">已关注</view>
-					<view style="margin-left: 20px;width:73px;height:36px;background-color: #ecf5ff;border: 1px solid #99dc6d;color:#99dc6d;display: flex;align-items: center;justify-content: center;border-radius: 3px;"  v-show="jugelogin()"  @click="tochat()">私信</view>
+					<view style="width:75px;height:38px;background-color: #8bc863;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;"  v-show="!jugeattention()&&jugelogin()" @click="addattention()">关注</view>
+					<view style="width:73px;height:36px;background-color: #ecf5ff;border: 1px solid #8bc863;color:#8bc863;display: flex;align-items: center;justify-content: center;border-radius: 3px;"  v-show="jugeattention()&&jugelogin()" @click="deleteattention()">已关注</view>
+					<view style="margin-left: 20px;width:73px;height:36px;background-color: #ecf5ff;border: 1px solid #8bc863;color:#8bc863;display: flex;align-items: center;justify-content: center;border-radius: 3px;"  v-show="jugelogin()"  @click="tochat()">私信</view>
 					</view>
 					</view>
 					</view>
@@ -100,11 +100,11 @@
 							 &nbsp
 						</view>
 						<view style="width:100%;height:20px;background:rgba(255,255,255,1);margin-top: -20px;
-						z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#99dc6d;margin-bottom: 10px;
+						z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#8bc863;margin-bottom: 10px;
 						" 
 						v-if="jugetops[index]"
 						>
-							查看更多<u-icon name="arrow-down" size=18 color="#99dc6d"></u-icon>
+							查看更多<u-icon name="arrow-down" size=18 color="#8bc863"></u-icon>
 						</view>
 						<view v-if="item.image.length==1">
 							<view  style="display: flex;width:100%;flex-wrap: warp;border-radius: 3px;">
@@ -223,7 +223,7 @@
 		
 		</view>
 		</scroll-view>
-		<view style="width:40px;height:40px;border-radius: 50%;display: flex;align-items: center;justify-content: center;background-color: #99dc6d;
+		<view style="width:40px;height:40px;border-radius: 50%;display: flex;align-items: center;justify-content: center;background-color: #8bc863;
 		position: fixed;bottom:20px;z-index: 5;;margin-left: 95%;transition-duration:0.3s"
 		 @click="backtop()"  v-show="open1==1"
 		>

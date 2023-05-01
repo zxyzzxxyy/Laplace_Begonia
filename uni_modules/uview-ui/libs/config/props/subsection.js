@@ -12,7 +12,7 @@ export default {
     subsection: {
         list: [],
         current: 0,
-        activeColor: '#99dc6d',
+        activeColor: '#8bc863',
         inactiveColor: '#303133',
         mode: 'button',
         fontSize: 12,

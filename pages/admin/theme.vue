@@ -148,7 +148,7 @@
 							<u-divider style="width:100%"></u-divider>
 							<view style="background-color: #f4f4f5;height:5rem;width:100%;border-right: 1px solid #f4f4f5;;border-left: 1px solid #f4f4f5;display: flex;align-items: center;" v-if="themelist.length>0">
 							<view style="display: flex;flex-direction: column;align-items: center;justify-content: center;width:5%">
-								<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:#99dc6d;" v-if="selectall==1" @click="deleteall()">
+								<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:#8bc863;" v-if="selectall==1" @click="deleteall()">
 									<u-icon name="checkbox-mark" color="white"></u-icon>
 								</view>
 								<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:white;" v-if="selectall==0" @click="selectall1()">
@@ -167,7 +167,7 @@
 									border-top: 0.1px solid #d8d8d8;
 									border-right: 1px solid #d8d8d8;
 									">
-										<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:#99dc6d;" v-if="jugetheme(item.themeid)" @click="addselecttheme(item.themeid)"> 
+										<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:#8bc863;" v-if="jugetheme(item.themeid)" @click="addselecttheme(item.themeid)"> 
 											<u-icon name="checkbox-mark" color="white"></u-icon>
 										</view>
 										<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:white;" v-if="!jugetheme(item.themeid)" @click="addselecttheme(item.themeid)">
@@ -228,10 +228,10 @@
 												<text style="color:#5ac725">正常</text>
 												</view>
 												<view v-if="item.jing==1" style="margin-left: 4rem;">
-												<text style="color:#99dc6d">精华</text>
+												<text style="color:#8bc863">精华</text>
 												</view>
 												<view v-if="item.top==1" style="margin-left: 4rem;">
-												<text style="color:#99dc6d">顶置</text>
+												<text style="color:#8bc863">顶置</text>
 												</view>
 												<view style="margin-right: 2rem;margin-left: auto;" class="changecolor" v-if="item.show1==1"
 												@click="deletetheme_admin(item.themeid)"
@@ -307,7 +307,7 @@
 								<view style="margin-right: 1rem;">共: {{themenum}}条</view> 
 								<view style="margin-right: 1rem;color:#398ade" v-if="page!=1" @click="lastpage()">上一页</view>
 								<view style="margin-right: 1rem;" v-if="page!=1">{{page-1}}</view>
-								<view style="margin-right: 1rem;color:#99dc6d">{{page}}</view>
+								<view style="margin-right: 1rem;color:#8bc863">{{page}}</view>
 								<view style="margin-right: 1rem;" v-if="jugepagemax()">{{page+1}}</view>
 								<view style="color:#398ade" v-if="themenum>page*10" @click="nextpage()">下一页</view>
 							</view>
@@ -395,7 +395,7 @@
 					</view>
 					<view style="background-color: #f4f4f5;height:5rem;width:100%;border-right: 1px solid #f4f4f5;;border-left: 1px solid #f4f4f5;display: flex;align-items: center;" >
 					<view style="display: flex;flex-direction: column;align-items: center;justify-content: center;width:5%">
-						<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:#99dc6d;" v-if="selectall2==1" @click="deleteall_1()">
+						<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:#8bc863;" v-if="selectall2==1" @click="deleteall_1()">
 							<u-icon name="checkbox-mark" color="white"></u-icon>
 						</view>
 						<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:white;" v-if="selectall2==0" @click="selectall_1()">
@@ -417,7 +417,7 @@
 								border-top: 0.1px solid #d8d8d8;
 								border-right: 1px solid #d8d8d8;
 								">
-									<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:#99dc6d;" v-if="jugereply(item.id)" @click="addselectreply(item.id)"> 
+									<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:#8bc863;" v-if="jugereply(item.id)" @click="addselectreply(item.id)"> 
 										<u-icon name="checkbox-mark" color="white"></u-icon>
 									</view>
 									<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:white;" v-if="!jugereply(item.id)" @click="addselectreply(item.id)">
@@ -496,7 +496,7 @@
 						<view style="margin-right: 1rem;">共: {{replynum}}条</view> 
 						<view style="margin-right: 1rem;color:#398ade" v-if="page1!=1" @click="lastpage1()">上一页</view>
 						<view style="margin-right: 1rem;" v-if="page1!=1">{{page1-1}}</view>
-						<view style="margin-right: 1rem;color:#99dc6d">{{page1}}</view>
+						<view style="margin-right: 1rem;color:#8bc863">{{page1}}</view>
 						<view style="margin-right: 1rem;" v-if="jugepagemax1()">{{page1+1}}</view>
 						<view style="color:#398ade" v-if="replynum>=page1*10" @click="nextpage1()">下一页</view>
 					</view>
@@ -562,7 +562,7 @@
 					</view>
 					<view style="background-color: #f4f4f5;height:5rem;width:100%;border-right: 1px solid #f4f4f5;;border-left: 1px solid #f4f4f5;display: flex;align-items: center;" >
 					<view style="display: flex;flex-direction: column;align-items: center;justify-content: center;width:5%">
-						<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:#99dc6d;" v-if="selectall2==1" @click="deleteall_1()">
+						<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:#8bc863;" v-if="selectall2==1" @click="deleteall_1()">
 							<u-icon name="checkbox-mark" color="white"></u-icon>
 						</view>
 						<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:white;" v-if="selectall2==0" @click="selectall_1()">
@@ -584,7 +584,7 @@
 								border-top: 0.1px solid #d8d8d8;
 								border-right: 1px solid #d8d8d8;
 								">
-									<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:#99dc6d;" v-if="jugereply(item.id)" @click="addselectreply(item.id)"> 
+									<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:#8bc863;" v-if="jugereply(item.id)" @click="addselectreply(item.id)"> 
 										<u-icon name="checkbox-mark" color="white"></u-icon>
 									</view>
 									<view style="width:1rem;height:1rem;border-radius: 4px;border:1px solid #d8d8d8;display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:white;" v-if="!jugereply(item.id)" @click="addselectreply(item.id)">
@@ -666,7 +666,7 @@
 						<view style="margin-right: 1rem;">共: {{loucengreplynum}}条</view> 
 						<view style="margin-right: 1rem;color:#398ade" v-if="page2!=1" @click="lastpage2()">上一页</view>
 						<view style="margin-right: 1rem;" v-if="page2!=1">{{page2-1}}</view>
-						<view style="margin-right: 1rem;color:#99dc6d">{{page2}}</view>
+						<view style="margin-right: 1rem;color:#8bc863">{{page2}}</view>
 						<view style="margin-right: 1rem;" v-if="jugepagemax2()">{{page2+1}}</view>
 						<view style="color:#398ade" v-if="loucengreplynum>=page2*10" @click="nextpage2()">下一页</view>
 					</view>

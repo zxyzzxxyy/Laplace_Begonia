@@ -4,7 +4,7 @@
 			<view>
 				<text style="font-size: 20px;font-weight: 700;">数 据</text>
 				<u-divider ></u-divider>
-				<view style="display: flex;flex-direction: row;color:#99dc6d">
+				<view style="display: flex;flex-direction: row;color:#8bc863">
 					<u-icon name="account" size="18" style="margin-right: 0.2rem;"></u-icon>
 					<text>数据统计</text>
 				</view>
@@ -61,7 +61,7 @@
 			<view>
 				<view style=";border:solid 1px #d8d8d8;">
 					<view style="width:100%;border-bottom: 1px solid #d8d8d8;padding-top:0.5rem;padding-bottom: 0.5rem;display: flex;flex-direction: row;">
-						<u-icon name="calendar" size="25" style="margin-left: 1rem;" color="#99dc6d"></u-icon>
+						<u-icon name="calendar" size="25" style="margin-left: 1rem;" color="#8bc863"></u-icon>
 						<text style="font-size: 20px;margin-left: 0rem;">站点每日数据</text>
 					</view>
 					<qiun-data-charts 
@@ -78,7 +78,7 @@
 			<view style="display: flex;flex-direction: row;margin-top: 2rem;margin-bottom: 1rem;">
 				<view style="border:solid 1px #d8d8d8;width:48%">
 					<view style="width:100%;border-bottom: 1px solid #d8d8d8;padding-top:0.5rem;padding-bottom: 0.5rem;display: flex;flex-direction: row;">
-						<u-icon name="calendar" size="25" style="margin-left: 1rem;" color="#99dc6d"></u-icon>
+						<u-icon name="calendar" size="25" style="margin-left: 1rem;" color="#8bc863"></u-icon>
 						<text style="font-size: 20px;">文章分类占比</text>
 					</view>
 					<view class="charts-box">
@@ -93,7 +93,7 @@
 				</view>
 				<view style="border:solid 1px #d8d8d8;width:48%;margin-left: 4%;">
 					<view style="width:100%;border-bottom: 1px solid #d8d8d8;padding-top:0.5rem;padding-bottom: 0.5rem;display: flex;flex-direction: row;">
-						<u-icon name="calendar" size="25" style="margin-left: 1rem;" color="#99dc6d"></u-icon>
+						<u-icon name="calendar" size="25" style="margin-left: 1rem;" color="#8bc863"></u-icon>
 						<text style="font-size: 20px;">热门话题</text>
 					</view>
 					<view class="charts-box">

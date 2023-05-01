@@ -28,7 +28,7 @@
 							<view style="display: flex;flex-direction: row;align-items: center;"><u-icon name="chat" size="15" color="#909399" style="margin-right: 2px;"></u-icon><text>{{info.num}}</text></view>
 						</view>
 						<view style="font-size: 15px;">
-							<text style="color:#99dc6d">#{{info.tagname}}#</text><text style="opacity: 0;">1</text><text>{{info.title}}</text>
+							<text style="color:#8bc863">#{{info.tagname}}#</text><text style="opacity: 0;">1</text><text>{{info.title}}</text>
 						</view>
 					</view>
 				</view>	
@@ -88,11 +88,11 @@
 								&nbsp
 							</view>
 							<view style="width:100%;height:20px;background:rgba(255,255,255,1);margin-top: -20px;
-							z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#99dc6d;margin-bottom: 10px;
+							z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#8bc863;margin-bottom: 10px;
 							" 
 							v-show="jugetops[index]"
 							>
-								查看更多<u-icon name="arrow-down" size=18 color="#99dc6d"></u-icon>
+								查看更多<u-icon name="arrow-down" size=18 color="#8bc863"></u-icon>
 							</view>
 							<view v-if="item.image.length==1">
 								<view  style="display: flex;width:100%;flex-wrap: warp;border-radius: 3px;">
@@ -165,7 +165,7 @@
 							<view style="display: flex;flex-direction: row;align-items: center;color:#838383" v-show="jugelike(item.themeid)"
 							@click="deletelike(item.themeid)"
 							>
-								<u-icon name="thumb-up-fill" color="#99dc6d"  size="25" style="margin-right: 3px;" ></u-icon>
+								<u-icon name="thumb-up-fill" color="#8bc863"  size="25" style="margin-right: 3px;" ></u-icon>
 								<text  style="font-size: 17px;">{{item.likes}}</text>
 							</view>
 							<view style="display: flex;flex-direction: row;align-items: center;color:#838383;margin-left: 30%;margin-right: 30%;">

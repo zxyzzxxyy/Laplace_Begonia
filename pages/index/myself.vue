@@ -125,11 +125,11 @@
 							
 						</view>
 						<view style="width:100%;height:20px;background:rgba(255,255,255,1);margin-top: -20px;
-						z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#99dc6d;margin-bottom: 10px;
+						z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#8bc863;margin-bottom: 10px;
 						" 
 						v-show="jugetops[index]"
 						>
-							查看更多<u-icon name="arrow-down" size=18 color="#99dc6d"></u-icon>
+							查看更多<u-icon name="arrow-down" size=18 color="#8bc863"></u-icon>
 						</view>
 						<view v-if="item.image.length==1">
 							<view  style="display: flex;width:100%;flex-wrap: warp;border-radius: 3px;">
@@ -204,7 +204,7 @@
 					<view style="width:100%;display:flex;flex-direction:row">
 						
 					<text style="font-size: 20px;font-weight: 700;">个人资料</text>								<view style="margin-left:auto;margin-right:1%">
-					<text style="font-size: 15px;color:#99dc6d" @click="changepassword()">修改密码</text>
+					<text style="font-size: 15px;color:#8bc863" @click="changepassword()">修改密码</text>
 					</view>
 					</view>
 					<u-divider text="分割线" :dot="true" style="width:95%;margin: 0 auto;margin-top: 10px;margin-bottom: 10px;"></u-divider>
@@ -227,7 +227,7 @@
 						<view style="width: 80%;">
 					<text style="margin-right:5px;">身份标识 :</text><text>{{shenfen}}</text>
 					</view>
-					<text style="margin-left: auto;margin-right: 1%;font-size: 15px;color:#99dc6d" @click="show6=true">点击修改</text>
+					<text style="margin-left: auto;margin-right: 1%;font-size: 15px;color:#8bc863" @click="show6=true">点击修改</text>
 					</view>
 					<br>
 					
@@ -238,7 +238,7 @@
 					<u--text :text="sign" type="info" :lines="1" v-if="sign!=null"></u--text>
 					<u--text text="暂无签名" type="info" :lines="1" v-if="sign==null"></u--text>
 					</view>
-					<text style="margin-left: auto;margin-right: 1%;font-size: 15px;color:#99dc6d" @click="open()">点击修改</text>
+					<text style="margin-left: auto;margin-right: 1%;font-size: 15px;color:#8bc863" @click="open()">点击修改</text>
 					</view>
 					
 					<u-divider text="分割线" :dot="true" style="width:95%;margin: 0 auto;margin-top: 10px;margin-bottom: 10px;"></u-divider>
@@ -264,14 +264,14 @@
 							<text style="font-size: 16px;">{{item.username}}</text>
 							<u--text :lines="1" :text="item.sign" size="13"color="#909399"></u--text>
 						</view>
-						<view style="width:50px;height:30px;background-color: #99dc6d;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="!jugeattention(item.userid)" @click="addattention(item.userid)">关注</view>
-						<view style="width:48px;height:28px;background-color: #ecf5ff;border: 1px solid #99dc6d;color:#99dc6d;display: flex;align-items: center;justify-content: center;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="jugeattention(item.userid)" @click="deleteattention(item.userid)">已关注</view>
+						<view style="width:50px;height:30px;background-color: #8bc863;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="!jugeattention(item.userid)" @click="addattention(item.userid)">关注</view>
+						<view style="width:48px;height:28px;background-color: #ecf5ff;border: 1px solid #8bc863;color:#8bc863;display: flex;align-items: center;justify-content: center;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="jugeattention(item.userid)" @click="deleteattention(item.userid)">已关注</view>
 					</view>
 				</view>
 				<view style="display: flex;flex-direction: column;align-items: center;justify-content: center;margin-bottom: 10px;color:#787878" v-if="attentionlist.length==0">
 					<text>没有更多了</text>
 				</view>
-				<view style="display: flex;flex-direction: column;align-items: center;justify-content: center;margin-bottom: 10px;color:#99dc6d" v-if="attentionlist.length>0" >
+				<view style="display: flex;flex-direction: column;align-items: center;justify-content: center;margin-bottom: 10px;color:#8bc863" v-if="attentionlist.length>0" >
 					<text @click="show1=true">更多</text>
 				</view>
 			</view>
@@ -292,14 +292,14 @@
 							<text style="font-size: 16px;">{{item.username}}</text>
 							<u--text :lines="1" :text="item.sign" size="13"color="#909399"></u--text>
 						</view>
-						<view style="width:50px;height:30px;background-color: #99dc6d;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="!jugeattention(item.userid)" @click="addattention(item.userid)">关注</view>
-						<view style="width:48px;height:28px;background-color: #ecf5ff;border: 1px solid #99dc6d;color:#99dc6d;display: flex;align-items: center;justify-content: center;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="jugeattention(item.userid)" @click="deleteattention(item.userid)">已关注</view>
+						<view style="width:50px;height:30px;background-color: #8bc863;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="!jugeattention(item.userid)" @click="addattention(item.userid)">关注</view>
+						<view style="width:48px;height:28px;background-color: #ecf5ff;border: 1px solid #8bc863;color:#8bc863;display: flex;align-items: center;justify-content: center;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="jugeattention(item.userid)" @click="deleteattention(item.userid)">已关注</view>
 					</view>
 				</view>
 				<view style="display: flex;flex-direction: column;align-items: center;justify-content: center;margin-bottom: 10px;color:#787878" v-if="fanss.length==0">
 					<text>没有更多了</text>
 				</view>
-				<view style="display: flex;flex-direction: column;align-items: center;justify-content: center;margin-bottom: 10px;color:#99dc6d" v-if="fanss.length>0" >
+				<view style="display: flex;flex-direction: column;align-items: center;justify-content: center;margin-bottom: 10px;color:#8bc863" v-if="fanss.length>0" >
 					<text @click="show2=true">更多</text>
 				</view>
 			</view>
@@ -355,8 +355,8 @@
 		           		<u--text :lines="1" :text="item.sign" size="13"color="#909399"></u--text>
 		           		</view>
 		           	</view>
-		           	<view style="width:50px;height:30px;background-color: #99dc6d;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="!jugeattention(item.userid)" @click="addattention(item.userid)">关注</view>
-		           	<view style="width:48px;height:28px;background-color: #ecf5ff;border: 1px solid #99dc6d;color:#99dc6d;display: flex;align-items: center;justify-content: center;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="jugeattention(item.userid)" @click="deleteattention(item.userid)">已关注</view>
+		           	<view style="width:50px;height:30px;background-color: #8bc863;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="!jugeattention(item.userid)" @click="addattention(item.userid)">关注</view>
+		           	<view style="width:48px;height:28px;background-color: #ecf5ff;border: 1px solid #8bc863;color:#8bc863;display: flex;align-items: center;justify-content: center;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="jugeattention(item.userid)" @click="deleteattention(item.userid)">已关注</view>
 		           </view>
 				   <view style="display: flex;flex-direction: column;align-items: center;justify-content: center;margin-bottom: 10px;color:#787878">
 				   	<text>没有更多了</text>
@@ -381,8 +381,8 @@
 		           		<u--text :lines="1" :text="item.sign" size="13"color="#909399"></u--text>
 		           		</view>
 		           	</view>
-		           	<view style="width:50px;height:30px;background-color: #99dc6d;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="!jugeattention(item.userid)" @click="addattention(item.userid)">关注</view>
-		           	<view style="width:48px;height:28px;background-color: #ecf5ff;border: 1px solid #99dc6d;color:#99dc6d;display: flex;align-items: center;justify-content: center;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="jugeattention(item.userid)" @click="deleteattention(item.userid)">已关注</view>
+		           	<view style="width:50px;height:30px;background-color: #8bc863;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="!jugeattention(item.userid)" @click="addattention(item.userid)">关注</view>
+		           	<view style="width:48px;height:28px;background-color: #ecf5ff;border: 1px solid #8bc863;color:#8bc863;display: flex;align-items: center;justify-content: center;border-radius: 3px;font-size: 15px;margin-left: auto;margin-right: 10px;"  v-show="jugeattention(item.userid)" @click="deleteattention(item.userid)">已关注</view>
 		           </view>
 				   <view style="display: flex;flex-direction: column;align-items: center;justify-content: center;margin-bottom: 10px;color:#787878" >
 				   	<text>没有更多了</text>
@@ -441,11 +441,11 @@
 							
 						</view>
 						<view style="width:100%;height:20px;background:rgba(255,255,255,1);margin-top: -20px;
-						z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#99dc6d;margin-bottom: 10px;
+						z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#8bc863;margin-bottom: 10px;
 						" 
 						v-show="jugetops2[index]"
 						>
-							查看更多<u-icon name="arrow-down" size=18 color="#99dc6d"></u-icon>
+							查看更多<u-icon name="arrow-down" size=18 color="#8bc863"></u-icon>
 						</view>
 					<view v-if="item.image.length==1">
 						<view  style="display: flex;width:100%;flex-wrap: warp;border-radius: 3px;">
@@ -516,7 +516,7 @@
 						<view style="display: flex;flex-direction: row;align-items: center;color:#838383" v-show="jugelike(item.themeid)"
 						@click="deletelike(item.themeid)"
 						>
-							<u-icon name="thumb-up-fill" color="#99dc6d"  size="25" style="margin-right: 3px;" ></u-icon>
+							<u-icon name="thumb-up-fill" color="#8bc863"  size="25" style="margin-right: 3px;" ></u-icon>
 							<text  style="font-size: 17px;">{{item.likes}}</text>
 						</view>
 						<view style="display: flex;flex-direction: row;align-items: center;color:#838383;margin-left: 30%;margin-right: 30%;">
@@ -589,11 +589,11 @@
 							
 						</view>
 						<view style="width:100%;height:20px;background:rgba(255,255,255,1);margin-top: -20px;
-						z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#99dc6d;margin-bottom: 10px;
+						z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#8bc863;margin-bottom: 10px;
 						" 
 						v-show="jugetops1[index]"
 						>
-							查看更多<u-icon name="arrow-down" size=18 color="#99dc6d"></u-icon>
+							查看更多<u-icon name="arrow-down" size=18 color="#8bc863"></u-icon>
 						</view>
 						<view v-if="item.image.length==1">
 							<view  style="display: flex;width:100%;flex-wrap: warp;border-radius: 3px;">
@@ -664,7 +664,7 @@
 						<view style="display: flex;flex-direction: row;align-items: center;color:#838383" v-show="jugelike(item.themeid)"
 						@click="deletelike(item.themeid)"
 						>
-							<u-icon name="thumb-up-fill" color="#99dc6d"  size="25" style="margin-right: 3px;" ></u-icon>
+							<u-icon name="thumb-up-fill" color="#8bc863"  size="25" style="margin-right: 3px;" ></u-icon>
 							<text  style="font-size: 17px;">{{item.likes}}</text>
 						</view>
 						<view style="display: flex;flex-direction: row;align-items: center;color:#838383;margin-left: 30%;margin-right: 30%;">
@@ -758,7 +758,7 @@
 				
 		        </view>
 		</u-popup>
-		<view style="width:40px;height:40px;border-radius: 50%;display: flex;align-items: center;justify-content: center;background-color: #99dc6d;
+		<view style="width:40px;height:40px;border-radius: 50%;display: flex;align-items: center;justify-content: center;background-color: #8bc863;
 		position: fixed;bottom:20px;z-index: 5;;margin-left: 95%;transition-duration:0.3s"
 		 @click="backtop()"  v-show="open1==1"
 		>

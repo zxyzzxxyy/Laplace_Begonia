@@ -34,8 +34,8 @@
 							</view>
 						</view>
 						<view v-if="jugelogin()&&jugemyself(item.userid)" style="margin-left: auto;margin-right: 10px;">
-						<view style="width:50px;height:30px;background-color: #99dc6d;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;font-size: 15px"  v-show="!jugeattention(item.userid)" @click="addattention(item.userid)" >关注</view>
-						<view style="width:48px;height:28px;background-color: #ecf5ff;border: 1px solid #99dc6d;color:#99dc6d;display: flex;align-items: center;justify-content: center;border-radius: 3px;font-size: 15px"  v-show="jugeattention(item.userid)" @click="deleteattention(item.userid)">已关注</view>
+						<view style="width:50px;height:30px;background-color: #8bc863;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;font-size: 15px"  v-show="!jugeattention(item.userid)" @click="addattention(item.userid)" >关注</view>
+						<view style="width:48px;height:28px;background-color: #ecf5ff;border: 1px solid #8bc863;color:#8bc863;display: flex;align-items: center;justify-content: center;border-radius: 3px;font-size: 15px"  v-show="jugeattention(item.userid)" @click="deleteattention(item.userid)">已关注</view>
 						</view>
 						</view>
 						<view  v-show="index!=userlist.length-1">
@@ -105,11 +105,11 @@
 								 &nbsp
 							</view>
 							<view style="width:100%;height:20px;background:rgba(255,255,255,1);margin-top: -20px;
-							z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#99dc6d;margin-bottom: 10px;
+							z-index: 2;display: flex;align-items: center;justify-content: center;flex-direction: row;color:#8bc863;margin-bottom: 10px;
 							" 
 							v-show="jugetops[index]"
 							>
-								查看更多<u-icon name="arrow-down" size=18 color="#99dc6d"></u-icon>
+								查看更多<u-icon name="arrow-down" size=18 color="#8bc863"></u-icon>
 							</view>
 							
 							<view v-if="item.image.length==1">
@@ -183,7 +183,7 @@
 							<view style="display: flex;flex-direction: row;align-items: center;color:#838383" v-show="jugelike(item.themeid)"
 							@click="deletelike(item.themeid)"
 							>
-								<u-icon name="thumb-up-fill" color="#99dc6d"  size="25" style="margin-right: 3px;" ></u-icon>
+								<u-icon name="thumb-up-fill" color="#8bc863"  size="25" style="margin-right: 3px;" ></u-icon>
 								<text  style="font-size: 17px;">{{item.likes}}</text>
 							</view>
 							<view style="display: flex;flex-direction: row;align-items: center;color:#838383;margin-left: 30%;margin-right: 30%;">

@@ -1,7 +1,7 @@
 <template>
 	<view style="font-size: 16px;overflow-x: hidden;">
 		<view v-if="admin==1">
-			<view style="width:100vw;height:4rem;background-color: #99dc6d;display: flex;flex-direction: row;
+			<view style="width:100vw;height:4rem;background-color: #8bc863;display: flex;flex-direction: row;
 			align-items: center;">
 				<view style="width: 10rem;margin-left: 2rem;margin-right: 2rem;">
 					

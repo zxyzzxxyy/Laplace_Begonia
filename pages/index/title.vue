@@ -6,7 +6,7 @@
 		<view style="width:40vw;display: flex;flex-direction: row;margin-left: 8vw;">
 		<view style="display: flex;flex-direction: row;width:60%;overflow: hidden;margin-right:20px" @click="click,shouye()">
 		<!--<u--image :fade="false" :showLoading="true" src="../../static/1.png" style="margin-left:0%;"  width="160" height="35" @click="click,shouye()" ></u--image>-->
-		<view style="width: 550px;font-size:30px;color:#99dc6d;height:35px;display: flex;align-items: center;justify-content: center;font-family: zhuzi;;"><text>{{'Laplace Begonia'}}</text>
+		<view style="width: 550px;font-size:30px;color:#8bc863;height:35px;display: flex;align-items: center;justify-content: center;font-family: zhuzi;;"><text>{{'Laplace Begonia'}}</text>
 		<image src="../../static/book.png" style="width:30px;height:30px;margin-left:5px;margin-top:5px"> </image>
 		</view>
 		<!--搜索框-->

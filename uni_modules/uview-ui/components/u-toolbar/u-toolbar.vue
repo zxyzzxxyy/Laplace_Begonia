@@ -45,7 +45,7 @@
 	 * @property {String}	cancelText		取消按钮的文字（默认 '取消' ）
 	 * @property {String}	confirmText		确认按钮的文字（默认 '确认' ）
 	 * @property {String}	cancelColor		取消按钮的颜色（默认 '#909193' ）
-	 * @property {String}	confirmColor	确认按钮的颜色（默认 '#99dc6d' ）
+	 * @property {String}	confirmColor	确认按钮的颜色（默认 '#8bc863' ）
 	 * @property {String}	title			标题文字
 	 * @event {Function} 
 	 * @example 
