@@ -78,7 +78,7 @@
 							<u-avatar mode="aspectFill":src="item.systemheadimage"size="45"></u-avatar>
 							
 							<view style="display: flex;flex-direction:column;margin-left:8px">
-								<text>{{item.systemname}}</text>
+								<text>Laplace</text>
 								<text style="font-size: 14px;color:#909399;">{{time(item.createtime)}}</text>
 							</view>
 						</view>
@@ -190,7 +190,7 @@
 			this.username=getApp().globalData.username;
 			this.userheadimage=getApp().globalData.userheadimage;
 			this.admin=getApp().globalData.admin;
-			this.userbackgroundimage=getApp().globalData.userbackgroundimage;
+			//this.userbackgroundimage=getApp().globalData.userbackgroundimage;
 			this.getmy_systemmessage();
 			getApp().globalData.replymessagenum=0;
 			if(this.themelist.length==0)this.status="nomore";

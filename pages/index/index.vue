@@ -521,16 +521,16 @@
 				<view style="width:100%;display: flex;flex-direction: column;;align-items: center;font-family: zhuzi;">
 					<text style=";font-size: 18px;font-weight: 700;margin-bottom: 10px;margin-top: 15px;;margin-left:-18px">📈 网站统计</text>
 					<view style="width:100%;display:flex;flex-direction: row;align-items: center;justify-content: center;margin-top:5px">
-						<text style="margin-right:5px;font-size:19px;">用户总数：{{siteinfo.totleusernum}}</text>
-						<text style="margin-left:5px;font-size: 19px;">文章总数：{{siteinfo.totlethemenum}}</text>
+						<view style="margin-left:5%;font-size:19px;width:50%">今日访客：{{siteinfo.todayfangke}}</view>
+						<view style="margin-left:auto;font-size: 19px;width:40%">文章总数：{{siteinfo.totlethemenum}}</view>
 					</view>
 					<view style="width:100%;display:flex;flex-direction: row;align-items: center;justify-content: center;margin-top:10px">
-						<text style="margin-right:5px;font-size: 19px;">今日文章：{{siteinfo.todaynewtheme}}</text>
-						<text style="margin-left:5px;font-size: 19px;">今日评论：{{siteinfo.todaynewreply}}</text>
+						<view style="margin-left:5%;font-size: 19px;;width:50%">今日文章：{{siteinfo.todaynewtheme}}</view>
+						<view style="margin-left:auto;font-size: 19px;;width:40%;">今日评论：{{siteinfo.todaynewreply}}</view>
 					</view>
 					<view style="width:100%;display:flex;flex-direction: row;align-items: center;justify-content: center;margin-top:10px">
-						<text style="margin-right:5px;font-size: 19px;">今日活跃：{{siteinfo.todayhotuser}}</text>
-						<text style="margin-left:5px;font-size: 19px;">精华文章：{{siteinfo.jingnum}}</text>
+						<view style="margin-left:5%;font-size: 19px;;width:50%">今日活跃：{{siteinfo.todayhotuser}}</view>
+						<view style="margin-left:auto;font-size: 19px;;width:40%">精华文章：{{siteinfo.jingnum}}</view>
 					</view>
 					<text style="margin-top:15px;margin-bottom:10px;font-size: 17px;margin-top:20px">{{nowDate}} </text>
 					<text style="font-size: 17px;">论坛已运行{{rundata}}</text>
@@ -539,6 +539,26 @@
 					<text style=";color:#8bc863;margin-top:15px;margin-left:15px"  class="text1" @click="about2=true,show=true"> 🍵一点闲话</text>
 					</view>
 				</view>
+				</swiper-item>
+				<swiper-item>
+					<view style="width:100%;display: flex;flex-direction: column;;align-items: center;font-family: zhuzi;">
+						<text style=";font-size: 18px;font-weight: 700;margin-bottom: 25px;margin-top: 15px;;margin-left:-18px;">📓 更新日志</text>
+						<view style="width:100%;display: flex;flex-direction: column;" v-for="(item,index) in notes">
+							<view style="margin-bottom:15px">
+								<view style="width:100%;display: flex;flex-direction: row;align-items: center;">
+									<view style="background-color: #8bc863;border-radius: 50%;width:10px;height:10px;">
+										
+									</view>
+									<view style="margin-left: 10px;height:15px">
+										{{item.time.split("T")[0]}}
+									</view>
+								</view>
+								<view style="margin-top: 15px;margin-left:20px">
+										{{item.note}}
+								</view>
+							</view>
+						</view>
+					</view>
 				</swiper-item>
 				<swiper-item>
 					<view style="width:100%;display: flex;flex-direction: column;;align-items: center;font-family: zhuzi;">
@@ -879,6 +899,7 @@
 		},
 		data() {
 			return {
+				notes:[],
 				musicaudio:100,
 				playtype:2,
 				total_time:300,
@@ -1028,6 +1049,21 @@
 		
 		onLoad() {
 			uni.request({
+				url:getApp().globalData.http+"/api/updatenotes",
+				method:"POST",
+				data:{},
+				success: (res) => {
+					this.notes=res.data.data;
+				}
+			})
+			uni.request({
+				url:getApp().globalData.http+"/api/fangke",
+				method:"POST",
+				data:{},
+				success: (res) => {
+				}
+			})
+			uni.request({
 				url:getApp().globalData.http+"/api/musiclist",
 				method:"POST",
 				data:{},
@@ -1058,6 +1094,7 @@
 				data:{},
 				success: (res) => {
 					this.siteinfo=res.data.today;
+					this.siteinfo.todayfangke=res.data.todayfangke;
 					//console.log(this.siteinfo);
 				}
 			})
