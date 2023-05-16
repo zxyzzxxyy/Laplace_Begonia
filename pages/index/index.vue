@@ -9,7 +9,7 @@
 		</u-transition>
 		<!--center-->
 
-		<view style=";height:92vh;overflow-y:hidden;width:85vw;padding-left: 7.5%;padding-right: 7.5%;border-radius:5px;background-size: cover;background-attachment: fixed;;background-color: #f8f8f8;
+		<view style=";height:92vh;overflow-y:hidden;width:90vw;padding-left: 5%;padding-right: 5%;border-radius:5px;background-size: cover;background-attachment: fixed;;background-color: #f8f8f8;
 		padding-top: 8vh;display: flex;background-color: rgba(255,255,255,0);" 
 		>
 		<vue-particles
@@ -36,7 +36,7 @@
 			<!--left-->
 			<view style="width: 20%;z-index:2;overflow-y: auto;">
 			<u-transition :show="transition1&&show==false" mode="fade-left" style="100%">
-			<view style="width:100%;;height:auto; background-color:white;border-radius: 5px;overflow-y: auto;padding-bottom: 10%;" :style="{'opacity':op}">
+			<view style="width:95%;padding-left:2.5%;padding-right:2.5%;height:auto; background-color:white;border-radius: 5px;overflow-y: auto;padding-bottom: 10%;" :style="{'opacity':op}">
 				<view v-for="(item,index) in leftlist" style=";" @click="getmore=true;themelist=[];limit=0;getthemelistby_fenlei(item,index),select_fenlei=index" >
 					<view style="width:100%;height:25px;display: flex;flex-direction: row;padding-top: 18px;padding-bottom: 18px;color:#818181;align-items: center;">
 					<text class="text-blue" style="font-size: 19px;margin-left: 10px;"
@@ -394,7 +394,7 @@
 				<swiper-item>
 					<view style="width:100%;display: flex;flex-direction: column;">
 						<view style="width:100%;display: flex;align-items: center;justify-content: center;margin-bottom: 5px;">
-							<text style=";font-size: 18px;font-weight: 700;margin-bottom: 10px;margin-top: 15px;;margin-left:-18px;font-family: zhuzi;">🖧 技术使用</text>
+							<text style=";font-size: 18px;font-weight: 700;margin-bottom: 15px;margin-top: 15px;;margin-left:-18px;font-family: zhuzi;">🖧 技术使用</text>
 						</view>
 					<view style="width:100%;display: flex;flex-direction: row;flex-wrap: wrap;">
 						<view>

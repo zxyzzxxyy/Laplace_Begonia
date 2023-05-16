@@ -1,16 +1,20 @@
 <template>
-	<view style="background-color: #ffffff;font-size: 16px;display: flex;flex-direction: row;">
-		<view style="width:20rem;height:auto;box-shadow: 0 2PX 12PX 0 rgb(0 0 0 / 6%);background-color: white;padding:1rem">
+	<view style="background-color: #ffffff;font-size: 16px;display: flex;flex-direction: row;height:100vh">
+		<view style="width:20rem;height:100vh;box-shadow: 0 2PX 12PX 0 rgb(0 0 0 / 6%);background-color: white;padding:1rem">
 			<view>
 				<text style="font-size: 20px;font-weight: 700;">数 据</text>
 				<u-divider ></u-divider>
-				<view style="display: flex;flex-direction: row;color:#8bc863">
+				<view style="display: flex;flex-direction: row;" @click="page=1" :style="{color:page==1?'#8bc863':'black'}">
 					<u-icon name="account" size="18" style="margin-right: 0.2rem;"></u-icon>
 					<text>数据统计</text>
 				</view>
+				<view style="display: flex;flex-direction: row;margin-top: 15px;" :style="{color:page==2?'#8bc863':'black'}" @click="page=2">
+					<u-icon name="account" size="18" style="margin-right: 0.2rem;" ></u-icon>
+					<text>访客记录</text>
+				</view>
 			</view>
 		</view>
-		<view style="padding:1rem;width:100%" >
+		<view style="padding:1rem;width:100%" v-if="page==1">
 			<view style="display: flex;padding-left: 1rem;flex-direction: column;">
 				<text style=";font-size: 20px">数据统计</text>
 				<u-divider style="width: 100%;" ></u-divider>
@@ -108,6 +112,19 @@
 				</view>
 			</view>
 		</view>
+		<view style="padding:1rem;width:100%;height:100%" v-if="page==2">
+			<view style="display: flex;padding-left: 1rem;flex-direction: column;">
+				<text style=";font-size: 20px">访客记录</text>
+				<u-divider style="width: 100%;" ></u-divider>
+			</view>
+				<view v-for="(item,index) in fangkelist" style="margin-left:1rem;width:90%;;margin-bottom: 25px;border-bottom:0.1px solid #dbdfe8;padding-bottom: 10px;">
+					<text style="">{{time(item.time)}}</text>
+					<view style="margin-top: 15px;">
+						<text >{{item.data}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -115,7 +132,9 @@
 	export default {
 		data() {
 			return {
-				 opts: {
+				page:1,
+				fangkelist:[],
+				opts: {
 				        color: ["#1890FF","#91CB74","#FAC858","#EE6666","#73C0DE","#3CA272","#FC8452","#9A60B4","#ea7ccc"],
 				        padding: [15,10,0,15],
 				        enableScroll: false,
@@ -168,11 +187,28 @@
 		},
 		methods: {
 			con:function(e){
-				console.log(e);
+				
 			},
 			onload(){
+				var a='1683648000000';
 				this.username=getApp().globalData.username;
 				this.currentTime();
+				uni.request({
+					url:getApp().globalData.http+"/api/fangkejilu",
+					method:"POST",
+					data:{},
+					success: (res) => {
+						for(var i=0;i<res.data.time.length;i++){
+							var temp={
+								time:res.data.time[i],
+								data:res.data.data['a'+res.data.time[i]]
+							};
+							//console.log(temp);
+							this.fangkelist.push(temp);
+						}
+					
+					}
+				})
 				uni.request({
 					url:getApp().globalData.http+"/api/getStatistics",
 					method:"POST",
@@ -252,6 +288,22 @@
 							
 					}
 				})
+			},
+			time(i){
+			
+				let date = new Date(parseInt(i));
+				let year = date.getFullYear(); // 年
+				let month = date.getMonth() + 1; // 月
+				let day = date.getDate(); // 日
+				let week = date.getDay(); // 星期
+				let weekArr = [ "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六" ];
+				let hour = date.getHours(); // 时
+				hour = hour < 10 ? "0" + hour : hour; // 如果只有一位，则前面补零
+				let minute = date.getMinutes(); // 分
+				minute = minute < 10 ? "0" + minute : minute; // 如果只有一位，则前面补零
+				let second = date.getSeconds(); // 秒
+				second = second < 10 ? "0" + second : second; // 如果只有一位，则前面补零
+				return `${year}年${month}月${day}日 `+weekArr[week];
 			},
 			currentTime() {
 			     setInterval(this.formatDate, 500);
