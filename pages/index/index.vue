@@ -1,16 +1,16 @@
 <template>
-	<view style="background-color: #f8f8f8;width:100vw;height:100vh;overflow: hidden;position: absolute;"  v-bind:style="{backgroundImage:'url(' + userbackgroundimage + ')'}"	 id="body">
-		<!--顶部栏-->
+	<view @mousemove="test1" class="body1" style="-webkit-transform:transition3d/translateZ;background-size: 100%;back;background-color: #f8f8f8;width:100vw;height:100vh;overflow-y: hidden"	 
+	:style="{'--weizhi':backweizhi,'--transition':backmiao+'s','--back':'url('+userbackgroundimage+')'}"
+	>
 		<u-transition duration="500" :show="!show" mode="fade-down" style="z-index: 3;"> 
-		<titles style="width:100vw;height:auto;max;min-height: 50px;" :username="username" :userheadimage="userheadimage" :admin="admin"
+		<titles style="width:100vw;" :username="username" :userheadimage="userheadimage" :admin="admin"
 		:replymessageshow="replymessageshow"
 		></titles>
 		</u-transition>
 		<!--center-->
 
 		<view style=";height:92vh;overflow-y:hidden;width:85vw;padding-left: 7.5%;padding-right: 7.5%;border-radius:5px;background-size: cover;background-attachment: fixed;;background-color: #f8f8f8;
-		padding-top: 8vh;display: flex;;" 
-	 v-bind:style="{backgroundImage:'url(' + userbackgroundimage + ')'}"	
+		padding-top: 8vh;display: flex;background-color: rgba(255,255,255,0);" 
 		>
 		<vue-particles
 		v-if="shapecolor.length>0&&!show"
@@ -34,7 +34,7 @@
 		>
 		</vue-particles>
 			<!--left-->
-			<view style="width: 20%;z-index:2">
+			<view style="width: 20%;z-index:2;overflow-y: auto;">
 			<u-transition :show="transition1&&show==false" mode="fade-left" style="100%">
 			<view style="width:100%;;height:auto; background-color:white;border-radius: 5px;overflow-y: auto;padding-bottom: 10%;" :style="{'opacity':op}">
 				<view v-for="(item,index) in leftlist" style=";" @click="getmore=true;themelist=[];limit=0;getthemelistby_fenlei(item,index),select_fenlei=index" >
@@ -73,10 +73,10 @@
 			</view></u-transition>
 			</view>
 			<!--center-->
-		<u-transition duration="500" :show="transition2&&show==false" mode="fade" style="height:auto;width:56%;margin-left:2%;margin-right:2%;border-radius: 5px;"
+		<u-transition duration="500" :show="transition2&&show==false" mode="fade" style="height:auto;width:56%;margin-left:2%;margin-right:2%;border-radius:5px 5px 0 0;"
 		@click="con1" id="scroll2"
 		>	  
-		<scroll-view  id="scroll1" style="display:flex;justify-content: center;;width:100%;;height:100vh; ;margin-left: 0%;margin-right: 0%;border-radius: 5px;overflow-y: auto;"
+		<scroll-view  id="scroll1" style="display:flex;justify-content: center;;width:100%;;height:100vh; ;margin-left: 0%;margin-right: 0%;border-radius: 5px 5px 0 0;overflow-y: auto;"
 		:style="{'opacity':op}"  scroll-y :scroll-top="scroll_top" @scroll="scroll" :scroll-with-animation="true"
 		@scrolltoupper="scroll_top=0" @scrolltolower="getthemelistby_fenlei()" :scroll-into-view="scrollid" class="scroll"
 		>
@@ -281,11 +281,11 @@
 		</scroll-view>
 		</u-transition>	
 			<!--right-->
-		<view style="width:20%;height:100%;z-index:2">
+		<view style="width:22%;height:100%;z-index:2;overflow-y: auto;">
 			
 			<view
 			 v-if="activity.length>0"
-			 style="width:110%;margin-top:0px;margin-bottom: 20px;border-radius: 5px;overflow: hidden;">
+			 style="width:100%;margin-top:0px;margin-bottom: 20px;border-radius: 5px;overflow: hidden;">
 			 <u-transition :show="activity.length>0&&show==false" mode="fade-right" style="width:100%">
 			<Xsuu-swiper :swiperItems="activity"
 			style="width:100%;"
@@ -294,7 +294,7 @@
 			</u-transition>
 			 </view>
 			<u-transition :show="tuijianlist.length>0&&show==false" mode="fade-right" style="width:100%;height:400px;max-height: 60vh;padding-bottom:0%;">
-			<view  style="width:100%;height:350px;max-height: 60vh; background-color:white;padding-left:5%;padding-right: 5%;border-radius: 5px;padding-top:10px;padding-bottom: 5%;"
+			<view  style="width:90%;height:350px;max-height: 60vh; background-color:white;padding-left:5%;padding-right: 5%;border-radius: 5px;padding-top:10px;padding-bottom: 5%;"
 			:style="{'opacity':op}"
 			>
 				<view style="margin-top: 10px;margin-left: 0%;">
@@ -323,7 +323,7 @@
 			</view>
 			</u-transition>
 			<u-transition :show="(juge1()&&show==false)&&activity.length>0||(a111&&show==false)&&activity.length>0" mode="fade-right" style="width:100%;height:auto;;max-height: 60vh;;margin-top:0px">
-			<view  style="width:100%;margin-bottom: 50px;;height:auto;max-height: 60vh; background-color:white;padding-left:5%;padding-right: 5%;border-radius: 5px;"
+			<view  style="width:90%;margin-bottom: 0px;;height:auto;max-height: 60vh; background-color:white;padding-left:5%;padding-right: 5%;border-radius: 5px;"
 			
 			>
 			<swiper style="width:100%;height:300px" circular autoplay>
@@ -345,19 +345,19 @@
 						@click="linkto('begonia.cafe')"
 						class="text1"
 						>
-							mingqian.begonia.cafe(备案中)
+							mingqian.begonia.cafe
 						</text>
 						<text style=";color:#8bc863;"
 						@click="linkto('begonia.cafe')"
 						class="text1"
 						>
-							www.begonia.cafe(备案中)
+							www.begonia.cafe
 						 </text>
 						 <text style=";color:#8bc863;"
 						 @click="linkto('begonia.cafe')"
 						 class="text1"
 						 >
-						 	begonia.cafe(备案中)
+						 	begonia.cafe
 						  </text>
 					</view>
 					<view style="
@@ -521,22 +521,22 @@
 				<view style="width:100%;display: flex;flex-direction: column;;align-items: center;font-family: zhuzi;">
 					<text style=";font-size: 18px;font-weight: 700;margin-bottom: 10px;margin-top: 15px;;margin-left:-18px">📈 网站统计</text>
 					<view style="width:100%;display:flex;flex-direction: row;align-items: center;justify-content: center;margin-top:5px">
-						<view style="margin-left:5%;font-size:19px;width:50%">今日访客：{{siteinfo.todayfangke}}</view>
-						<view style="margin-left:auto;font-size: 19px;width:40%">文章总数：{{siteinfo.totlethemenum}}</view>
+						<view style="margin-left:3%;font-size:18px;width:50%">今日访客：{{siteinfo.todayfangke}}</view>
+						<view style="margin-left:auto;font-size: 18px;width:50%">文章总数：{{siteinfo.totlethemenum}}</view>
 					</view>
 					<view style="width:100%;display:flex;flex-direction: row;align-items: center;justify-content: center;margin-top:10px">
-						<view style="margin-left:5%;font-size: 19px;;width:50%">今日文章：{{siteinfo.todaynewtheme}}</view>
-						<view style="margin-left:auto;font-size: 19px;;width:40%;">今日评论：{{siteinfo.todaynewreply}}</view>
+						<view style="margin-left:3%;font-size: 18px;;width:50%">今日文章：{{siteinfo.todaynewtheme}}</view>
+						<view style="margin-left:auto;font-size: 18px;;width:50%;">今日评论：{{siteinfo.todaynewreply}}</view>
 					</view>
 					<view style="width:100%;display:flex;flex-direction: row;align-items: center;justify-content: center;margin-top:10px">
-						<view style="margin-left:5%;font-size: 19px;;width:50%">今日活跃：{{siteinfo.todayhotuser}}</view>
-						<view style="margin-left:auto;font-size: 19px;;width:40%">精华文章：{{siteinfo.jingnum}}</view>
+						<view style="margin-left:3%;font-size: 18px;;width:50%">今日活跃：{{siteinfo.todayhotuser}}</view>
+						<view style="margin-left:auto;font-size: 18px;;width:50%">精华文章：{{siteinfo.jingnum}}</view>
 					</view>
 					<text style="margin-top:15px;margin-bottom:10px;font-size: 17px;margin-top:20px">{{nowDate}} </text>
 					<text style="font-size: 17px;">论坛已运行{{rundata}}</text>
 					<view style="display: flex;justify-content: center;">
-					<text style=";color:#8bc863;margin-top:15px;margin-right: 15px;"  class="text1" @click="about1=true,show=true">💻关于网站 </text>
-					<text style=";color:#8bc863;margin-top:15px;margin-left:15px"  class="text1" @click="about2=true,show=true"> 🍵一点闲话</text>
+					<text style=";color:#8bc863;margin-top:15px;margin-right: 15px;"  class="text1" @click="about1=true,show=true,backmiao1()">💻关于网站 </text>
+					<text style=";color:#8bc863;margin-top:15px;margin-left:15px"  class="text1" @click="about2=true,show=true,backmiao1()"> 🍵一点闲话</text>
 					</view>
 				</view>
 				</swiper-item>
@@ -690,13 +690,13 @@
 		</u-transition>
 		</view>
 		<!--关于-->
-		<u-popup :show="about1" @close="about1=false,show=false" mode="center" round="15">
+		<u-popup :show="about1" @close="about1=false,show=false,backmiao2()" mode="center" round="15">
 			<view style="width:50vw;height:90vh;;">
 				<about style="margin-top: -50px;"></about>
 			</view>
 		</u-popup>
 		<!--碎念-->
-		<u-popup :show="about2" @close="about2=false,show=false" mode="center" round="15">
+		<u-popup :show="about2" @close="about2=false,show=false,backmiao2()" mode="center" round="15">
 			<view style="width:400px;height:300px;font-family: zhuzi;padding-left: 10px;padding-right: 10px;padding-bottom: 50px;">
 				<view style="margin-top: 20px;width:100%;display: flex;justify-content: center;">
 				<text style="text-align: center;font-size: 24px;font-weight: 700;">一点碎碎念</text>
@@ -717,11 +717,11 @@
 		<view style="width:45px;height:45px;border-radius: 10px;background-color: white;display:flex;align-items: center;justify-content: center;
 		">
 			<uni-icons type="headphones" size="35" color="#8bc863"
-			@click="show=!show,tools=!tools"
+			@click="show=!show,tools=!tools,backmiao1()"
 			v-if="!musictype"
 			></uni-icons>
 			<view style="width:100%;height:90%;margin-bottom:10%;display: flex;align-items: flex-end;justify-content: center;" v-if="musictype"
-			@click="show=!show,tools=!tools"
+			@click="show=!show,tools=!tools,backmiao1()"
 			
 			>
 				<view style="width:8px;height:10px;border:5px 5px 0 0;background-color: #8bc863;"
@@ -744,7 +744,7 @@
 		</view>
 		</u-transition>
 		<!--音乐-->
-		<u-popup :show="tools" @close="tools=false,show=false,charaop=0" mode="center" round="20">
+		<u-popup :show="tools" @close="tools=false,show=false,charaop=0,backmiao2()" mode="center" round="20">
 			<view style="width:80vw;height:80vh;background-color: white;border-radius: 15px;
 			display:flex;flex-direction:row
 			" v-if="musiclist.length>0" @mouseenter="mouseenter" @mouseleave="mouseleave">
@@ -782,18 +782,26 @@
 						</image>
 					</view>
 					<view style="width:100%;height:100%;position:absolute;z-index:2;display: flex;align-items: center;justify-content: center;">
-						<image style="height:100%;margin-top:0%;width:auto;margin-bottom:0;" mode="heightFix"
+						<view 
+						:class="{'beiguang1':charaop==1,'beiguang2':charaop==0}" 
+						style=";bottom:0;filter:blur(100px);position:absolute;z-index:-1;transition: 1s;"
+						 >
+							
+						</view>
+						<img style="height:100%;width:100%;margin-bottom:0;width:100%;object-fit: contain;
+						
+						" 
 						:src="musiclist[musicid].charaimage" 
 						>
 							
-						</image>
-						<image style="width:100%;height:100%;position: absolute;z-index: 2;transition: 0.5s;" :class="{'charaop1':charaop==1,'charaop2':charaop==0}"  mode="heightFix" src="https://txtzz-1301452902.file.myqcloud.com/milky-green-v1.webp">
+						</img>
+						<img style="height:100%;width:100%;margin-bottom:0;width:100%;object-fit: contain;;position: absolute;z-index: 2;transition: 0.5s;" :class="{'charaop1':charaop==1,'charaop2':charaop==0}"   src="https://txtzz-1301452902.file.myqcloud.com/milky-green-v1.webp">
 							
-						</image>
+						</img>
 					</view>
-					<view style="width:100%;height:100%;top:0;position:absolute;z-index:3;background-color: rgba(0,0,0,0.3);
-					display: flex;align-items: center;flex-direction:column;font-size:22px;;
-					">
+					<view style="width:100%;height:100%;top:0;position:absolute;z-index:3;
+					display: flex;align-items: center;flex-direction:column;font-size:22px;transition: 0.5s;
+					" :class="{'heise1':charaop==0,'heise2':charaop==1}">
 						<view style="width:75%;height:70%;border-radius: 15px;background-color: rgba(0,0,0,0.4);padding:5%;padding-top:2%;;margin-top:5%;overflow-y: auto;margin-right:-3%;">
 							<view v-for="(item,index) in musiclist" style="height:50px;width:100%;color:white;display:flex;flex-direction: row;margin-bottom:50px">
 								<view style="width:30px;">
@@ -986,6 +994,7 @@
 				admin:0,
 				siteinfo:{},
 				sub2:0,
+				backmiao:0,
 				mylike:[
 					
 				],
@@ -1040,7 +1049,8 @@
 				shapecolor:"",
 				tools:false,
 				innerAudioContext:"",
-				charaop:1
+				charaop:1,
+				backweizhi:'translate3d(0px, 0px, 0px) scale(1.05)'
 			}
 		},
 		created() {
@@ -1048,6 +1058,7 @@
 		},
 		
 		onLoad() {
+		
 			uni.request({
 				url:getApp().globalData.http+"/api/updatenotes",
 				method:"POST",
@@ -1113,8 +1124,9 @@
 			if(!getApp().globalData.showjuge){
 				this.show=false;
 				this.zindex=-1;
+				this.backmiao=0.3;
 			}
-			else{ this.show=true}
+			else{ this.show=true;this.backmiao=0;}
 			//console.log(this.show);
 			this.showsub=uni.$u.random(0, 7);
 			this.tests();
@@ -1385,8 +1397,8 @@
 			this.scroll_top1=getApp().globalData.scroll_top1;
 			this.userbackgroundimage=getApp().globalData.userbackgroundimage;
 			if(this.userbackgroundimage==""||this.userbackgroundimage==null||this.userbackgroundimage==undefined){
-			getApp().globalData.userbackgroundimage='../../static/bg.webp';
-			this.userbackgroundimage='../../static/bg.webp'
+			getApp().globalData.userbackgroundimage='https://txtzz-1301452902.file.myqcloud.com/bg.webp';
+			this.userbackgroundimage='https://txtzz-1301452902.file.myqcloud.com/bg.webp'
 			}
 			this.username=getApp().globalData.username;
 			this.userheadimage=getApp().globalData.userheadimage;
@@ -1426,6 +1438,26 @@
 
 		},
 		methods: {
+			backmiao1(){
+				this.backmiao=0.3;
+				setTimeout(()=>{
+					this.backmiao=0;	
+				},300);
+			},
+			backmiao2(){
+				this.backmiao=0.3;
+			},
+			test1(e){
+				if(this.show)
+				uni.$u.throttle(this.test2(e), 500)
+				else
+				this.backweizhi="translate3d(0px , 0px , 0px) scale(1.05)";
+			},
+			test2(e){
+				var x=(uni.getSystemInfoSync().windowWidth/2-e.clientX)/uni.getSystemInfoSync().windowWidth*2;
+				var y= (uni.getSystemInfoSync().windowHeight/2-e.clientY)/uni.getSystemInfoSync().windowHeight*2;
+				this.backweizhi="translate3d("+x*10+"px , "+y*10+"px , 0px) scale(1.05)";
+			},
 			mouseleave(i){
 				this.charaop=0;
 			},
@@ -1493,8 +1525,8 @@
 			},
 			playmusic(){
 				this.musichead=this.musiclist[this.musicid].head;
-				this.$set(this.musichead,this.musiclist[this.musicid].head);
-				console.log(this.musichead);
+				//this.$set(this.musichead,this.musiclist[this.musicid].head);
+				//console.log(this.musichead);
 				this.musictype=1;
 				innerAudioContext.autoplay = true;
 				innerAudioContext.play(() => {
@@ -1664,12 +1696,14 @@
 				})
 			},
 			showopen(){
+		
 				this.show=true;
 				this.showsub=uni.$u.random(0, 7);
 				this.showlist1sub=0;
 				this.zindex=10;
 				this.timer = setInterval( () => {
 				    this.showlist2()
+					this.backmiao=0;
 				}, 300)
 				
 			},
@@ -1684,7 +1718,9 @@
 				}else return false;
 			},
 			showclose(){
+				this.backweizhi="translate3d(0px , 0px , 0px) scale(1.05)";
 			    this.show=false,
+				this.backmiao=0.3;
 				clearTimeout(this.timer);
 				this.timer = null;  
 				setTimeout(() => {
@@ -1831,14 +1867,16 @@
 			jugetop:function(){
 				let that=this;
 				setTimeout(() => {  
-				for(var i=0;i<this.themelist.length;i++){
+				for(var i=0;i<that.themelist.length;i++){
 					let info = uni.createSelectorQuery().select("#t"+i);
 					　　　  　info.boundingClientRect(function(data) { //data - 各种参数
-					　　　  　if(data.height>500)
+						
+					　　　  　if(data.height>50)
 								that.jugetops[i]=true;  // 获取元素宽度
 					}).exec()
-				}this.$set(this.jugetops,this.jugetops);
+				}that.$set(that.jugetops,that.jugetops);
 				} , 1)
+			
 			},
 
 			linktag:function(e){
@@ -1895,9 +1933,12 @@
 							}
 							this.jugeid=this.themelist[0].themeid;
 							this.getmore=true;
+							this.jugetop();
 							setTimeout(() => {
-								if(!this.show)
-								this.jugetop();
+								if(!this.show){
+									console.log("x");
+									this.jugetop();
+								}
 							}, 10)
 							if(res.data.data.length<10){
 								this.getmore=false;
@@ -2211,7 +2252,7 @@
 }
 
 .class2{
-	transform: scale(0.96)
+	
 }
 .showtool11{
 	transfrom:rotate(180deg)
@@ -2252,5 +2293,37 @@ a :visited {
 	}
 	.charaop2{
 		opacity: 1;
+	}
+	.beiguang1{
+		width:30px;
+		border-top: 0px solid transparent;  
+		border-left: 350px solid transparent;          
+		border-right: 350px solid transparent;      
+		border-bottom: 100vh solid  rgba(255, 254, 205, 0.8);
+		
+	}
+	.beiguang2{
+		width:0px;
+		border-top: 0px solid transparent;  
+		border-left: 0px solid transparent;          
+		border-right: 0px solid transparent;      
+		border-bottom: 0vh solid  rgba(255, 254, 205, 0.8);
+	}
+	.heise1{
+		background-color: rgba(0,0,0,0.3);
+	}
+	.heise2{
+		background-color: rgba(0,0,0,0);
+	}
+		
+	.body1::before {
+		content:"";
+		background: var(--back);
+		width:100vw;
+		height:100vh;  
+		background-size: cover;
+		transform: var(--weizhi);
+		position:absolute;
+		transition: var(--transition);
 	}
 </style>

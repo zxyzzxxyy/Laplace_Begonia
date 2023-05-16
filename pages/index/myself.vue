@@ -2,7 +2,7 @@
 	<view style="background-color: #f8f8f8;;;width:100vw;height:100vh;background-size: cover;background-attachment: fixed;overflow: hidden;" v-bind:style="{backgroundImage:'url(' + userbackgroundimage + ')'}" id="body">
 		<!--顶部栏-->
 		<u-transition mode="fade-down" style="100%" show>
-		<titles style="width:100vw;height:auto;min-height: 50px;" :username="username" :userheadimage="userheadimage" :admin="admin" :replymessageshow="replymessageshow"></titles>
+		<titles style="width:100vw;" :username="username" :userheadimage="userheadimage" :admin="admin" :replymessageshow="replymessageshow"></titles>
 		</u-transition>
 		<!--center-->
 		
@@ -983,8 +983,8 @@
 					this.userheadimage=res.data.data.userheadimage;
 					this.userbackgroundimage=res.data.data.userbackgroundimage;
 					if(this.userbackgroundimage==""||this.userbackgroundimage==null||this.userbackgroundimage==undefined){
-					getApp().globalData.userbackgroundimage='../../static/bg.webp';
-					this.userbackgroundimage='../../static/bg.webp'
+					getApp().globalData.userbackgroundimage='https://txtzz-1301452902.file.myqcloud.com/bg.webp';
+					this.userbackgroundimage='https://txtzz-1301452902.file.myqcloud.com/bg.webp'
 					}
 					this.sign=res.data.data.sign;
 					this.save=res.data.data.save;

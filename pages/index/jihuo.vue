@@ -1,7 +1,7 @@
 <template>
 	<view style="background-color: #f8f8f8;;;width:100vw;height:100vh;background-size: cover;background-attachment: fixed;overflow: hidden;" v-bind:style="{backgroundImage:'url(' + userbackgroundimage + ')'}" id="body">
 		<!--顶部栏-->
-		<titles style="width:100vw;height:auto;min-height: 50px;" username=" " userheadimage=" " :admin="0"></titles>
+		<titles style="width:100vw;" username=" " userheadimage=" " :admin="0"></titles>
 		<!--center-->
 		<view style="height:10%;width: 100%;opacity: 0;">
 			

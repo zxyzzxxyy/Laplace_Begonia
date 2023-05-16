@@ -1,6 +1,6 @@
 <template>
 		<view style="background-color: #f8f8f8;;;width:100vw;height:100vh;background-size: cover;background-attachment: fixed;overflow: hidden;"  v-bind:style="{backgroundImage:'url(' + userbackgroundimage + ')'}"	 id="body">
-		<titles style="width:100vw;height:auto;min-height: 50px;" :username="username" :userheadimage="userheadimage" :admin="admin" :replymessagenum="replymessagenum"></titles>
+		<titles style="width:100vw;" :username="username" :userheadimage="userheadimage" :admin="admin" :replymessagenum="replymessagenum"></titles>
 	<view style="height:10%;width: 100%;opacity: 0;">
 		
 	</view>

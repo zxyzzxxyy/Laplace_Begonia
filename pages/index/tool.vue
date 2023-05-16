@@ -2,7 +2,7 @@
 	<view style="background-color: #f8f8f8;;;width:100vw;height:100vh;background-size: cover;background-attachment: fixed;overflow: hidden;
 	display: flex;align-items: center;justify-content: center;
 	" v-bind:style="{backgroundImage:'url(' + userbackgroundimage + ')'}" id="body">
-	<titles style="width:100vw;height:auto;min-height: 50px;" :username="username" :userheadimage="userheadimage" :admin="admin" :replymessageshow="replymessageshow"></titles>
+	<titles style="width:100vw;" :username="username" :userheadimage="userheadimage" :admin="admin" :replymessageshow="replymessageshow"></titles>
 		<view style="height:70vh;width:70vw;background-color: white;border-radius: 15px;justify-content: center;display: flex;align-items: center;">
 			<view style="width:70%">
 			<view style="display: flex;flex-direction: row;">

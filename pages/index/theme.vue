@@ -1,7 +1,7 @@
 <template>
 	<view style="background-color: #f8f8f8;;;width:100vw;height:100vh;background-size: cover;background-attachment: fixed;overflow: hidden;" v-bind:style="{backgroundImage:'url(' + userbackgroundimage + ')'}" id="body">
 		<!--顶部栏-->
-		<titles style="width:100vw;height:auto;min-height: 50px;" :username="username" :userheadimage="userheadimage" :admin="admin1" :replymessageshow="replymessageshow"></titles>
+		<titles style="width:100vw;" :username="username" :userheadimage="userheadimage" :admin="admin1" :replymessageshow="replymessageshow"></titles>
 		<!--center-->
 		<scroll-view :scroll-y="true" style="height:100vh;z-index: -1;" 
 		 :scroll-into-view="scroll_top1" scroll-with-animation=""   @scrolltolower="getmorereply()" >
@@ -73,14 +73,14 @@
 								<view style="display: flex;align-items:center;width:100%">
 										<text style="margin-right: 10px;font-size:16px">{{username1}}</text>
 										<text style="font-size: 16px;" v-if="shenfen.length!=0">·</text><text style="margin-left:10px;font-size: 16px;color:#909399" v-if="shenfen.length!=0">{{shenfen}}</text>
+										<view style="margin-left: 10px;" v-if="jugemyself()">
+										<view style="width:55px;height:32px;background-color: #8bc863;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;"  v-show="jugelogin()&&!jugeattention()" @click="addattention()">关注</view>
+										<view style="width:53px;height:30px;background-color: #ecf5ff;border: 1px solid #8bc863;color:#8bc863;display: flex;align-items: center;justify-content: center;border-radius: 3px;"  v-show="jugelogin()&&jugeattention()" @click="deleteattention()">已关注</view>
+										</view>
 										<view style="margin-left: auto;margin-right: 10px;">
 											<text style="color:#909399;font-size: 16px;">发布于{{time1(createtime)}}</text>
 										</view>
-							</view>
-							<view style="margin-left: auto;" v-if="jugemyself()">
-							<view style="width:55px;height:32px;background-color: #8bc863;border-radius: 3px;display: flex;align-items: center;justify-content: center;color:white;border-radius: 3px;"  v-show="jugelogin()&&!jugeattention()" @click="addattention()">关注</view>
-							<view style="width:53px;height:30px;background-color: #ecf5ff;border: 1px solid #8bc863;color:#8bc863;display: flex;align-items: center;justify-content: center;border-radius: 3px;"  v-show="jugelogin()&&jugeattention()" @click="deleteattention()">已关注</view>
-							</view>
+								</view>
 							</view>
 							<view style="display: flex;flex-direction: row;align-items: center;margin-left: 5px;">
 								<text style="font-size: 14px;color:#838383;margin-right: 5px;">{{time(replytime)}}</text>

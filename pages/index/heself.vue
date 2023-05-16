@@ -3,7 +3,7 @@
 		<!--top-->
 		<!--顶部栏-->
 		<u-transition mode="fade-down" show>
-		<titles style="width:100vw;height:auto;min-height: 50px;" :username="myusername" :userheadimage="myuserheadimage" :admin="admin" :replymessageshow="replymessageshow"></titles>
+		<titles style="width:100vw;" :username="myusername" :userheadimage="myuserheadimage" :admin="admin" :replymessageshow="replymessageshow"></titles>
 		</u-transition>
 		<scroll-view @scroll="scroll" :scroll-top="scroll_top"  :scroll-with-animation="true"  style="height:100vh;width:100%;background-size: cover;background-attachment: fixed;overflow-y: auto;" v-bind:style="{backgroundImage:'url(' + userbackgroundimage + ')'}" v-if="username!=''" scroll-y @scrolltolower="getmoretheme">
 		<view style="height:10%;width:100%;opacity: 0;">	
@@ -294,7 +294,7 @@
 					this.userheadimage=res.data.data.userheadimage;
 					this.userbackgroundimage=res.data.data.userbackgroundimage;
 					if(this.userbackgroundimage==""||this.userbackgroundimage==null||this.userbackgroundimage==undefined){
-					this.userbackgroundimage='../../static/bg.webp'
+					this.userbackgroundimage='https://txtzz-1301452902.file.myqcloud.com/bg.webp'
 					}
 					this.sign=res.data.data.sign;
 					this.save=res.data.data.save;

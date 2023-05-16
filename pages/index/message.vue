@@ -1,6 +1,6 @@
 <template>
 	<view style="width: 100vw;height:100vh;background-size: cover;background-attachment: fixed;overflow: hidden;" v-bind:style="{backgroundImage:'url(' + userbackgroundimage + ')'}">
-		<titles style="width:100vw;height:auto;min-height: 50px;" :username="username" :userheadimage="userheadimage" :admin="admin" ></titles>
+		<titles style="width:100vw;" :username="username" :userheadimage="userheadimage" :admin="admin" ></titles>
 		<!--*************************-->
 		<view style="display: flex;flex-direction: row;display: flex;justify-content: center;padding-top: 10vh;">
 			<view style="background-color: white;border-radius: 10px;width:50vw;height:auto;min-height: 10vh;overflow-y: auto;padding:20px">
@@ -40,7 +40,7 @@
 					</view>
 					-->
 				</view>
-				<scroll-view style="margin-top:20px;max-height:70vh;" :scroll-y="true" @scrolltolower="getmore()" v-if="choose==0">
+				<scroll-view style="margin-top:20px;max-height:70vh;height:70vh" :scroll-y="true" @scrolltolower="getmore()" v-if="choose==0">
 					<view v-for="(item,index) in themelist" style="margin-bottom: 15px;" @click="theme(item.themeid,item.id)">
 						<view style="display: flex;flex-direction:row;margin-right: 5px;align-items: center;">
 							<u-avatar mode="aspectFill":src="item.userheadimage" v-if="item.userheadimage!=null" size="45"></u-avatar>
@@ -70,7 +70,7 @@
 					        nomore-text="实在没有了" 
 					    />
 				</scroll-view>
-				<scroll-view v-if="choose==1" style="margin-top:20px;max-height:70vh;" :scroll-y="true"
+				<scroll-view v-if="choose==1" style="margin-top:20px;max-height:70vh;height:70vh" :scroll-y="true"
 				@scrolltolower="getmy_systemmessage()"
 				>
 					<view v-for="(item,index) in systemmessage" style="margin-bottom: 15px;" >
@@ -99,7 +99,7 @@
 					        nomore-text="实在没有了" 
 					    />
 				</scroll-view>
-				<scroll-view style="margin-top:20px;max-height:70vh;background-color: white;width:100%;;" :scroll-y="true" @scrolltolower="getmore()"
+				<scroll-view style="margin-top:20px;max-height:70vh;background-color: white;width:100%;height:70vh;" :scroll-y="true" @scrolltolower="getmore()"
 				v-if="choose==2"
 				>
 					<view v-for="(item,index) in chat" @click="tochat(item)">

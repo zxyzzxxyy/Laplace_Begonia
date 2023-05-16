@@ -1,12 +1,12 @@
 <template>
-	<view style="height:50px;padding-top: 5px;padding-bottom: 5px;;position: fixed;top:0;background-color: white;border-bottom: 1px solid #e6e6e6;display: flex;align-items: center;z-index: 10;width:100vw;flex-direction: row;
+	<view style="height:5vh;padding-top: 5px;padding-bottom: 5px;;position: fixed;top:0;background-color: white;border-bottom: 1px solid #e6e6e6;display: flex;align-items: center;z-index: 10;width:100vw;flex-direction: row;
 	
 	">
 	<!--icon-->
 		<view style="width:40vw;display: flex;flex-direction: row;margin-left: 8vw;">
 		<view style="display: flex;flex-direction: row;width:60%;overflow: hidden;margin-right:20px" @click="click,shouye()">
 		<!--<u--image :fade="false" :showLoading="true" src="../../static/1.png" style="margin-left:0%;"  width="160" height="35" @click="click,shouye()" ></u--image>-->
-		<view style="width: 550px;font-size:30px;color:#8bc863;height:35px;display: flex;align-items: center;justify-content: center;font-family: zhuzi;;"><text>{{'Laplace Begonia'}}</text>
+		<view style="width: 550px;font-size:25px;color:#8bc863;height:35px;display: flex;align-items: center;justify-content: center;font-family: zhuzi;;"><text>{{'Laplace Begonia'}}</text>
 		<image src="../../static/book.png" style="width:30px;height:30px;margin-left:5px;margin-top:5px"> </image>
 		</view>
 		<!--搜索框-->
@@ -43,8 +43,7 @@
 			<u--text prefixIcon="grid" iconStyle="font-size: 18px" text="工具" style="max-width:50px;margin-right: 15px;" type="info" @click="tool()"></u--text>
 				</view>
 			</view>
-			<!--分割线-->
-			<view style="width:1px;height:85%;background-color: #e6e6e6;"></view>
+		
 			<!--头像-->
 			<view  style="margin-left: 15px;">
 				<u-button v-if="username==''" type="primary"  text="登录" @click="login()"></u-button>

@@ -1,7 +1,7 @@
 <template>
 	<view style="background-color: #f8f8f8;;;width:100vw;height:100vh;background-size: cover;background-attachment: fixed;overflow: hidden;" v-bind:style="{backgroundImage:'url(' + userbackgroundimage + ')'}" id="body">
 		<!--顶部栏-->
-		<titles style="width:100vw;height:auto;min-height: 50px;" :username="username" :userheadimage="userheadimage" :admin="admin" :replymessageshow="replymessageshow"></titles>
+		<titles style="width:100vw;" :username="username" :userheadimage="userheadimage" :admin="admin" :replymessageshow="replymessageshow"></titles>
 		<!--center-->
 		
 		<view style="display: flex;flex-direction: column;align-items: center;width:100vw;padding-top:min-height: 90vh;height:auto;background-size: cover;background-attachment: fixed;overflow-y: hidden;margin-top:10vh"  v-bind:style="{backgroundImage:'url(' + userbackgroundimage + ')'}" >
