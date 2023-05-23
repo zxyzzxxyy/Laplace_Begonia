@@ -1,7 +1,7 @@
 <template>
-	<view style="background-color: #ffffff;font-size: 16px;display: flex;flex-direction: row;">
+	<view style="background-color: #ffffff;font-size: 16px;display: flex;flex-direction: row;overflow-y: hidden;">
 		<view style="width:20rem;;height:auto;box-shadow: 0 2PX 12PX 0 rgb(0 0 0 / 6%);background-color: white;padding:1rem">
-			<view>
+			<view style="height:100%">
 				<text style="font-size: 20px;font-weight: 700;">用 户</text>
 				<u-divider ></u-divider>
 				<view style="display: flex;flex-direction: row;color:#8bc863" v-if="choose1==0">
@@ -31,8 +31,8 @@
 			</view>
 		</view>
 		<!--头像框-->
-		<view style="padding:1rem;width:100%" v-show="choose1==3">
-			<view style="display: flex;padding-left: 1rem;flex-direction: column;">
+		<view style="padding:1rem;width:100%;height:100%;overflow-y: auto;" v-show="choose1==3">
+			<view style="display: flex;padding-left: 1rem;flex-direction: column;margin-bottom: 20px">
 				<text style=";font-size: 20px;">头像框</text>
 				<u-divider style="width: 100%;" ></u-divider>
 				
@@ -103,7 +103,7 @@
 			</view>
 		</view>
 		<!--系统消息-->
-		<view style="padding:1rem;width:100%" v-show="choose1==1">
+		<view style="padding:1rem;width:100%;height:100%;overflow-y: auto;" v-show="choose1==1">
 			<view style="display: flex;padding-left: 1rem;flex-direction: column;">
 				<text style=";font-size: 20px;">系统消息</text>
 				<u-divider style="width: 100%;" ></u-divider>
@@ -166,7 +166,7 @@
 			</view>
 		</view>
 		<!--搜索页-->
-		<view style="padding:1rem;width:100%" v-show="show==0&choose1==0">
+		<view style="padding:1rem;width:100%;height:100%;overflow-y: auto;" v-show="show==0&choose1==0">
 			<view style="display: flex;padding-left: 1rem;flex-direction: column;">
 				<text style=";font-size: 20px;">用户管理</text>
 				<u-divider style="width: 100%;" ></u-divider>
@@ -193,7 +193,7 @@
 			</view>
 		</view>
 		<!--搜索结果-->
-		<view style="padding:1rem;width:100%;height:80vh;overflow-y: hidden;" v-show="show==1&choose1==0">
+		<view style="padding:1rem;width:100%;height:100%;;" v-show="show==1&choose1==0">
 			<view style="display: flex;padding-left: 1rem;flex-direction: column;">
 				<text style=";font-size: 20px">用户管理</text>
 				<u-divider style="width: 100%;" ></u-divider>
@@ -284,7 +284,7 @@
 			</view>
 		</view>
 		<!--个人详情-->
-		<view style="padding:1rem;width:100%;height:80vh;overflow-y: hidden" v-show="show==2&choose1==0">
+		<view style="padding:1rem;width:100;height:100%;overflow-y: auto;" v-show="show==2&choose1==0">
 			<view style="display: flex;padding-left: 1rem;flex-direction: column;">
 				<text style=";font-size: 20px">用户管理</text>
 				<u-divider style="width: 100%;" ></u-divider>

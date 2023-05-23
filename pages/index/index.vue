@@ -1,14 +1,29 @@
 <template>
-	<view @mousemove="test1" class="body1" style="-webkit-transform:transition3d/translateZ;background-size: 100%;back;background-color: #f8f8f8;width:100vw;height:100vh;overflow-y: hidden"	 
+	<view @mousemove="test1" class="body1" style="
+	-webkit-transform:transition3d/translateZ;
+	background-size: 100%;back;
+	background-color: #f8f8f8;
+	width:100vw;height:100vh;
+	overflow: hidden"	 
 	:style="{'--weizhi':backweizhi,'--transition':backmiao+'s','--back':'url('+userbackgroundimage+')'}"
+	@mouseenter="mouseenter1" @mouseleave="mouseleave1"
 	>
-		<u-transition duration="500" :show="!show" mode="fade-down" style="z-index: 3;"> 
+		<u-transition duration="500" :show="!show" mode="fade" style="position:absolute;"
+		
+		> 
+		<view style="width:100vw;height:100vh;position:absolute;background-size: cover;" v-bind:style="{backgroundImage:'url(' + userbackgroundimage + ')'}"
+		v-if="!show"
+		>
+		</view>
+		</u-transition>
+		<u-transition duration="500" :show="!show" mode="fade-down" style="z-index: 3;" 
+		
+		> 
 		<titles style="width:100vw;" :username="username" :userheadimage="userheadimage" :admin="admin"
 		:replymessageshow="replymessageshow"
 		></titles>
 		</u-transition>
 		<!--center-->
-
 		<view style=";height:92vh;overflow-y:hidden;width:90vw;padding-left: 5%;padding-right: 5%;border-radius:5px;background-size: cover;background-attachment: fixed;;background-color: #f8f8f8;
 		padding-top: 8vh;display: flex;background-color: rgba(255,255,255,0);" 
 		>
@@ -24,7 +39,7 @@
 		  :lineLinked="false"
 		  :lineOpacity="0.4"
 		  :linesDistance="150"
-		  :moveSpeed="3"
+		  :moveSpeed="1"
 		  :hoverEffect="false"
 		  hoverMode="grab"
 		  :clickEffect="false"
@@ -626,7 +641,7 @@
 		      :lineLinked="false"
 		      :lineOpacity="0.4"
 		      :linesDistance="150"
-		      :moveSpeed="3"
+		      :moveSpeed="1"
 		      :hoverEffect="false"
 		      hoverMode="grab"
 		      :clickEffect="false"
@@ -641,40 +656,123 @@
 		  font-family:zhuzi
 		  "
 		   >
-			<view style="display: flex;flex-direction: row;position: absolute;align-items: center;">
-			  <text style="font-size:50px;font-weight:700;color:white;
-			  text-shadow:3px 3px black;
-			  font-family:fangsong
-			  ">Laplace Begonia</text>		
-				<image src="../../static/book.png" style="width:50px;height:50px;margin-left:5px;margin-top:18px"></image>
+		    <!---->
+			<view style="width:100vw;height:100vh;position: absolute;top:0;left:0;display: flex;align-items: center;transition: 1s;"
+			 v-if="!showpixivbg"
+			>
+						<img style="height:80vh;width:80vw;margin-bottom:0;width:100%;object-fit: contain;margin-top: 20vh;
+						
+						" 
+						:src="musiclist[musicid].charaimage" 
+						>
+							
+						</img>
+						<img style="margin-top: 20vh;;height:80vh;width:80vw;margin-bottom:0;width:100%;object-fit: contain;;position: absolute;z-index: 2;transition: 0.5s;" 
+						:class="{'charaop1':charaop1==1,'charaop2':charaop1==0}"
+						src="https://txtzz-1301452902.file.myqcloud.com/milky-green-v1.webp">
+							
+						</img>
+						<view style="position: absolute;width:100vw;height:100vh;display: flex;align-items: center;justify-content: center;">
+						<view
+						class="beiguang3" 
+						style=";bottom:0;filter:blur(100px);position:absolute;z-index:-1;transition: 2s;"
+						:class="{'charaop1':charaop2==0,'charaop2':charaop2==1}"
+						 >
+							
+						</view>
+						<view :class="{'heise3':charaop1==0,'heise4':charaop1==1}" style="transition-delay: .25s;position: absolute;z-index: -2;width:100vw;height:100vh;top:0;left:0;transition: 1s;">
+							
+						</view>
+				</view>
+			</view>
+			<view style="width:100vw;height:100vh;position: absolute;top:0;left:0;display: flex;align-items: center;z-index:5;justify-content:center;
+			"
+			class="yangguang"
+			:style="{'--weizhi':backweizhi1,}"
+			v-if="!showpixivbg"
+			>
+					<view style="height:300vh;width:50px;background: linear-gradient(to right ,rgba(255, 254, 205, 0.05) 5%,  rgba(255, 254, 205, 0.06) 50%,rgba(255,254,205,0.05) 95%);margin-left:-800px;
+					transform:rotate(-60deg);filter: blur(8px);transition: 0.5s;
+					" 
+					:class="{'charaop1':charaop1==0,'charaop2':charaop1==1}"
+					>
+						
+					</view>
+					<view style="height:300vh;width:70px;background: linear-gradient(to right ,rgba(255, 254, 205, 0.05) 5%,  rgba(255, 254, 205, 0.06) 50%,rgba(255,254,205,0.05) 95%);margin-left: 1000px;
+					transform:rotate(-60deg);filter: blur(5px);transition: 0.5s;
+					"
+					:class="{'charaop1':charaop1==0,'charaop2':charaop1==1}"
+					>
+						
+					</view>
+
+				</view>
+				<view style="width:100vw;height:100vh;position: absolute;top:0;left:0;display: flex;align-items: center;z-index:5;justify-content:center;
+				translate(0,0,-50px)
+				"
+				class="yangguang"
+				:style="{'--weizhi':backweizhi2,}"
+				v-if="!showpixivbg"
+				>
+					<view style="height:300vh;width:100px;background: linear-gradient(to right ,rgba(255, 254, 205, 0.05) 5%,  rgba(255, 254, 205, 0.07) 50%,rgba(255,254,205,0.05) 95%);margin-left: 400px;
+					transform:rotate(-60deg);filter: blur(8px);transition: 0.5s;
+					"
+					:class="{'charaop1':charaop1==0,'charaop2':charaop1==1}"
+					>
+						
+					</view>
+					
+					<view style="height:300vh;width:250px;background: linear-gradient(to right ,rgba(255, 254, 205, 0.05) 5%,  rgba(255, 254, 205, 0.1) 50%,rgba(255,254,205,0.05) 95%);margin-left: 1000px;
+					transform:rotate(-60deg);filter: blur(10px);transition: 0.5s;
+					"
+					:class="{'charaop1':charaop1==0,'charaop2':charaop1==1}"
+					
+					>
+				</view>
 			</view>
 
-			  <view style="margin-top:100px;color:white;font-size:30px;font-weight:700;display:flex;
-			  height:200px;width:100vw;justify-content:center;
-			  "><text style="  text-shadow:2px 2px black;font-family:zhuzi">{{showlist1}}<text style="
-			  " class="re1">|</text></text></view>
-			  <view  style="width:100vw;position: absolute;top:0;display: flex;flex-direction: row;z-index: 5;
+			<!---->
+			<view style="display: flex;flex-direction: column;position: absolute;align-items: center;top:0;z-index: 6;margin-top:5vh"
+			v-if="!showpixivbg"
+			>
+				<text style="font-size:80px;font-weight:700;color:#b5bdab;font-family:a
+				">LAPLACE BEGONIA</text>
+				<text style="font-size:25px;font-weight:700;color:#b5bdab;font-family:zhuzi">{{title1}}</text>
+			</view>
+			<view style="display: flex;flex-direction: column;position: absolute;align-items: center;;z-index: 6;height:100vh;width:100vw;margin-top:-20vh;flex-direction:column"
+			v-if="showpixivbg"
+			>
+				<text style="font-size:80px;font-weight:700;color:white;font-family:a
+				">LAPLACE BEGONIA</text>
+				<view style="margin-top:20px;color:white;font-size:30px;font-weight:700;display:flex;
+				height:200px;width:100vw;justify-content:center;
+				"><text style="font-family:zhuzi">{{showlist1}}<text style="
+				" class="re1">|</text></text></view>
+			</view>
+				
+
+			  <view  style="width:100vw;position: absolute;top:0;display: flex;flex-direction: row;z-index: 5;color:#b5bdab
 			  
 			  ">
 					
 					<view style="margin-left: auto;width:30vw;display: flex;flex-direction: row;transition: 0.3s;"
 					:class="{'showtool1':showtool1}"
 					>
-					<view @click.stop="showtool1=!showtool1"  style="margin-left:-2vw;display: flex;flex-direction: row;color:white;align-items: center;" >
+					<view @click.stop="showtool1=!showtool1"  style="margin-left:-2vw;display: flex;flex-direction: row;align-items: center;" >
 						<text >设置</text>
 					</view>
-					<view style=";color:white;margin-left:auto;margin-left:2vw">
+					<view style=";margin-left:auto;margin-left:2vw">
 						<text @click.stop="changel2d()">切换人物</text>
 					</view>
-					<view style=";color:white;margin-left:2vw">
+					<view style=";;margin-left:2vw">
 						<text v-if="!showjuge()" @click.stop="changeshowjuge()">开启自动显示</text>
 						<text v-if="showjuge()"  @click.stop="changeshowjuge()">关闭自动显示</text>
 					</view>
-					<view style=";color:white;margin-left:2vw;">
+					<view style=";;margin-left:2vw;">
 						<text v-if="!showpixivbg" @click.stop="changepixivbg()">显示Pixiv封面</text>
 						<text v-if="showpixivbg"  @click.stop="changepixivbg()">关闭Pixiv封面</text>
 					</view>
-					<view style=";color:white;margin-left:2vw;margin-right:0vw">
+					<view style=";;margin-left:2vw;margin-right:0vw">
 						<text v-if="!showl2d" @click.stop="flush()">开启L2D显示</text>
 						<text v-if="showl2d"  @click.stop="flush()">关闭L2D显示</text>
 					</view>
@@ -993,6 +1091,7 @@
 				getmore:true,
 				admin:0,
 				siteinfo:{},
+				charaop1:0,
 				sub2:0,
 				backmiao:0,
 				mylike:[
@@ -1014,6 +1113,7 @@
 				],
 				nowDate:"",
 				rundata:"",
+				title1:"",
 				upload:[
 					{
 						type: 'success',
@@ -1049,8 +1149,11 @@
 				shapecolor:"",
 				tools:false,
 				innerAudioContext:"",
-				charaop:1,
-				backweizhi:'translate3d(0px, 0px, 0px) scale(1.05)'
+				charaop:0,
+				charaop2:0,
+				backweizhi:'translate3d(0px, 0px, 0px) scale(1.05)',
+				backweizhi1:'translate3d(0px, 0px, 0px)',
+				backweizhi2:'translate3d(0px, 0px, 0px)'
 			}
 		},
 		created() {
@@ -1058,7 +1161,8 @@
 		},
 		
 		onLoad() {
-		
+			let templist1=['奶绿只是想偷睡一会','奶绿只是想偷个懒罢了','奶绿只是想挣个钱罢了','奶绿能有什么坏心眼呢'];
+			this.title1=templist1[uni.$u.random(0, 3)];
 			uni.request({
 				url:getApp().globalData.http+"/api/updatenotes",
 				method:"POST",
@@ -1449,20 +1553,34 @@
 			},
 			test1(e){
 				if(this.show)
-				uni.$u.throttle(this.test2(e), 500)
+				uni.$u.throttle(this.test2(e), 1)
 				else
 				this.backweizhi="translate3d(0px , 0px , 0px) scale(1.05)";
 			},
 			test2(e){
 				var x=(uni.getSystemInfoSync().windowWidth/2-e.clientX)/uni.getSystemInfoSync().windowWidth*2;
 				var y= (uni.getSystemInfoSync().windowHeight/2-e.clientY)/uni.getSystemInfoSync().windowHeight*2;
-				this.backweizhi="translate3d("+x*10+"px , "+y*10+"px , 0px) scale(1.05)";
+				this.backweizhi="translate3d("+x*-20+"px , "+y*10+"px , 0px) scale(1.05)";
+				this.backweizhi1="translate3d("+x*80+"px , "+y*80+"px , 0px)";
+				this.backweizhi2="translate3d("+x*30+"px , "+y*30+"px , 0px)"
 			},
 			mouseleave(i){
 				this.charaop=0;
 			},
 			mouseenter(i){
 				this.charaop=1;
+			},
+			mouseenter1(i){
+				this.charaop1=1;
+				setTimeout(()=>{
+					this.charaop2=1;
+				},300);
+			},
+			mouseleave1(i){
+				this.charaop1=0;
+				setTimeout(()=>{
+					this.charaop2=0;
+				},300);
 			},
 			musicaudiochange(i){
 				//console.log(i);
@@ -2144,6 +2262,11 @@
 </script>
 
 <style>
+	body{
+		height:100vh;
+		width:100vw;
+		overflow: hidden;
+	}
 	.m1{
 		animation:m11 1s;
 		animation-iteration-count:infinite;
@@ -2309,21 +2432,37 @@ a :visited {
 		border-right: 0px solid transparent;      
 		border-bottom: 0vh solid  rgba(255, 254, 205, 0.8);
 	}
+	.beiguang3{
+		width:30px;
+		border-top: 0px solid transparent;  
+		border-left: 350px solid transparent;          
+		border-right: 350px solid transparent;      
+		border-bottom: 100vh solid  rgba(255, 254, 205, 0.8);
+		
+	}
 	.heise1{
 		background-color: rgba(0,0,0,0.3);
 	}
 	.heise2{
 		background-color: rgba(0,0,0,0);
 	}
-		
+	.heise4{
+		background-color: rgba(0,0,0,0.25);
+	}
+	.heise3{
+		background-color: rgba(0,0,0,0.8);
+	}	
 	.body1::before {
 		content:"";
-		background: var(--back);
+		background-image: url('https://txtzz-1301452902.file.myqcloud.com/bg.webp');
 		width:100vw;
 		height:100vh;  
 		background-size: cover;
 		transform: var(--weizhi);
 		position:absolute;
 		transition: var(--transition);
+	}
+	.yangguang{
+		transform: var(--weizhi);
 	}
 </style>

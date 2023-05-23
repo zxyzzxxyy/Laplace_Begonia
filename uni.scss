@@ -46,6 +46,10 @@ $uni-color-error: #dd524d;
 	  font-family: "zhuzi"; 
 	  src:url('@/static/zhuzi.woff2') format('truetype');
 }
+@font-face {
+	  font-family: "a"; 
+	  src:url('@/static/a.woff2') format('truetype');
+}
 /* 文字基本颜色 */
 $uni-text-color:#333;//基本色
 $uni-text-color-inverse:#fff;//反色
@@ -108,7 +112,5 @@ p {
 	font-family: lxg;
 }
 body{
-	height:100vh;
-	width:100vw;
 	overflow: hidden;
 }

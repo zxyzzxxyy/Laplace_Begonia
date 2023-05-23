@@ -1,6 +1,6 @@
 <template>
-	<view style="background-color: #ffffff;font-size: 16px;display: flex;flex-direction: row;height:100vh">
-		<view style="width:20rem;height:100vh;box-shadow: 0 2PX 12PX 0 rgb(0 0 0 / 6%);background-color: white;padding:1rem">
+	<view style="background-color: #ffffff;font-size: 16px;display: flex;flex-direction: row;height:100%;overflow-y:hidden;">
+		<view style="width:20rem;height:100%;box-shadow: 0 2PX 12PX 0 rgb(0 0 0 / 6%);background-color: white;padding:1rem">
 			<view>
 				<text style="font-size: 20px;font-weight: 700;">数 据</text>
 				<u-divider ></u-divider>
@@ -14,7 +14,7 @@
 				</view>
 			</view>
 		</view>
-		<view style="padding:1rem;width:100%" v-if="page==1">
+		<view style="padding:1rem;width:100%;height:100%;overflow-y: auto;" v-if="page==1">
 			<view style="display: flex;padding-left: 1rem;flex-direction: column;">
 				<text style=";font-size: 20px">数据统计</text>
 				<u-divider style="width: 100%;" ></u-divider>
@@ -79,7 +79,7 @@
 				    />
 				</view>
 			</view>
-			<view style="display: flex;flex-direction: row;margin-top: 2rem;margin-bottom: 1rem;">
+			<view style="display: flex;flex-direction: row;margin-top: 2rem;margin-bottom: 50px;">
 				<view style="border:solid 1px #d8d8d8;width:48%">
 					<view style="width:100%;border-bottom: 1px solid #d8d8d8;padding-top:0.5rem;padding-bottom: 0.5rem;display: flex;flex-direction: row;">
 						<u-icon name="calendar" size="25" style="margin-left: 1rem;" color="#8bc863"></u-icon>
@@ -112,7 +112,7 @@
 				</view>
 			</view>
 		</view>
-		<view style="padding:1rem;width:100%;height:100%" v-if="page==2">
+		<view style="padding:1rem;width:100%;;height:100%;overflow-y: auto;" v-if="page==2">
 			<view style="display: flex;padding-left: 1rem;flex-direction: column;">
 				<text style=";font-size: 20px">访客记录</text>
 				<u-divider style="width: 100%;" ></u-divider>

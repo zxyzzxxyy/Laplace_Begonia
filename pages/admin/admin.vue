@@ -1,7 +1,7 @@
 <template>
-	<view style="font-size: 16px;overflow-x: hidden;">
+	<view style="font-size: 16px;overflow-x: hidden;overflow-y:auto">
 		<view v-if="admin==1">
-			<view style="width:100vw;height:4rem;background-color: #8bc863;display: flex;flex-direction: row;
+			<view style="width:100vw;height:8vh;background-color: #8bc863;display: flex;flex-direction: row;
 			align-items: center;">
 				<view style="width: 10rem;margin-left: 2rem;margin-right: 2rem;">
 					
@@ -20,9 +20,9 @@
 				</view>
 				
 			</view>
-		<user style="width:100vw;height:auto" v-if="show==1"></user>
-		<theme style="width:100vw;height:auto" v-if="show==2"></theme>
-		<Statistics style="width:100vw;height:auto" v-if="show==3"></Statistics>
+		<user style="width:100vw;height:92vh;" v-if="show==1"></user>
+		<theme style="width:100vw;height:92vh;" v-if="show==2"></theme>
+		<Statistics style="width:100vw;height:92vh;" v-if="show==3"></Statistics>
 		</view>
 	</view>
 </template>
@@ -81,5 +81,8 @@
 }
 .t2{
 	color:white
+}
+body{
+	overflow: auto;
 }
 </style>

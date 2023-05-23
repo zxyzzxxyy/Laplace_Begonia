@@ -1,7 +1,7 @@
 <template>
-	<view style="background-color: #ffffff;font-size: 16px;display: flex;flex-direction: row;">
+	<view style="background-color: #ffffff;font-size: 16px;display: flex;flex-direction: row;overflow-y: hidden;">
 		<view style="width:20rem;height:auto;box-shadow: 0 2PX 12PX 0 rgb(0 0 0 / 6%);background-color: white;padding:1rem">
-			<view>
+			<view style="height:100%;">
 				<text style="font-size: 20px;font-weight: 700;">主 题</text>
 				<u-divider ></u-divider>
 				<view style="display: flex;flex-direction: row;">
@@ -16,7 +16,7 @@
 		</view>
 		<!--left-->
 			<!--分类管理-->
-				<view style="padding:1rem;width:100%" v-show="show==0">
+				<view style="padding:1rem;width:100%;height:100%;overflow-y: auto;" v-show="show==0">
 					<view style="display: flex;padding-left: 1rem;flex-direction: column;">
 						<text style=";font-size: 20px">分类管理</text>
 						<u-divider style="width: 100%;" ></u-divider>
@@ -72,7 +72,7 @@
 					</view>
 				</view>
 			<!--主题管理-->
-				<view style="padding:1rem;width:100%" v-show="show==1">
+				<view style="padding:1rem;width:90%;height:100%;overflow-y: auto;overflow-x: hidden;" v-show="show==1">
 					<view style="display: flex;padding-left: 1rem;flex-direction: column;">
 						<view style="display: flex;flex-direction: row;align-items: center;">
 						<text style=";font-size: 20px;width:6rem">主题管理</text>
