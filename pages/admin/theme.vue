@@ -305,11 +305,11 @@
 							</view>
 							<view style="height:5rem;width:100%;display: flex;justify-content: center;align-items: center;" v-if="themelist.length>0">
 								<view style="margin-right: 1rem;">共: {{themenum}}条</view> 
-								<view style="margin-right: 1rem;color:#398ade" v-if="page!=1" @click="lastpage()">上一页</view>
+								<view style="margin-right: 1rem;color:#8bc863" v-if="page!=1" @click="lastpage()">上一页</view>
 								<view style="margin-right: 1rem;" v-if="page!=1">{{page-1}}</view>
 								<view style="margin-right: 1rem;color:#8bc863">{{page}}</view>
 								<view style="margin-right: 1rem;" v-if="jugepagemax()">{{page+1}}</view>
-								<view style="color:#398ade" v-if="themenum>page*10" @click="nextpage()">下一页</view>
+								<view style="color:#8bc863" v-if="themenum>page*10" @click="nextpage()">下一页</view>
 							</view>
 							<view style="width:100%;margin-top: 2rem;" v-if="themelist.length!=0">
 								<view style="display: flex;flex-direction: row;width:100%;padding-left: 3rem;">
@@ -494,11 +494,11 @@
 					</view>
 					<view style="height:5rem;width:100%;display: flex;justify-content: center;align-items: center;" v-if="replylist.length>0">
 						<view style="margin-right: 1rem;">共: {{replynum}}条</view> 
-						<view style="margin-right: 1rem;color:#398ade" v-if="page1!=1" @click="lastpage1()">上一页</view>
+						<view style="margin-right: 1rem;color:#8bc863" v-if="page1!=1" @click="lastpage1()">上一页</view>
 						<view style="margin-right: 1rem;" v-if="page1!=1">{{page1-1}}</view>
 						<view style="margin-right: 1rem;color:#8bc863">{{page1}}</view>
 						<view style="margin-right: 1rem;" v-if="jugepagemax1()">{{page1+1}}</view>
-						<view style="color:#398ade" v-if="replynum>=page1*10" @click="nextpage1()">下一页</view>
+						<view style="color:#8bc863" v-if="replynum>=page1*10" @click="nextpage1()">下一页</view>
 					</view>
 					<view style="width:100%;margin-top: 2rem;" v-if="replylist.length>0">
 						<view style="display: flex;flex-direction: row;width:100%;padding-left: 3rem;">
@@ -664,11 +664,11 @@
 					</view>
 					<view style="height:5rem;width:100%;display: flex;justify-content: center;align-items: center;" v-if="loucengreplylist.length>0">
 						<view style="margin-right: 1rem;">共: {{loucengreplynum}}条</view> 
-						<view style="margin-right: 1rem;color:#398ade" v-if="page2!=1" @click="lastpage2()">上一页</view>
+						<view style="margin-right: 1rem;color:#8bc863" v-if="page2!=1" @click="lastpage2()">上一页</view>
 						<view style="margin-right: 1rem;" v-if="page2!=1">{{page2-1}}</view>
 						<view style="margin-right: 1rem;color:#8bc863">{{page2}}</view>
 						<view style="margin-right: 1rem;" v-if="jugepagemax2()">{{page2+1}}</view>
-						<view style="color:#398ade" v-if="loucengreplynum>=page2*10" @click="nextpage2()">下一页</view>
+						<view style="color:#8bc863" v-if="loucengreplynum>=page2*10" @click="nextpage2()">下一页</view>
 					</view>
 					
 					<!--********************-->
@@ -1918,14 +1918,14 @@
 button::after{border: initial;}
 .newfenlei{
 	font-size: 14px;
-	color:#2767a7
+	color:#8bc863
 }
 .newfenlei:hover{
 	font-size: 14px;
-	color:#3998f7
+	color:#8bc863
 }
 .choose{
-	color:#3998f7
+	color:#8bc863
 }
 .t1{
 	height:90vh;
@@ -1937,6 +1937,6 @@ button::after{border: initial;}
 	color:#2767a7
 }
 .changecolor:hover{
-	color:#3998f7
+	color:#8bc863
 }
 </style>
